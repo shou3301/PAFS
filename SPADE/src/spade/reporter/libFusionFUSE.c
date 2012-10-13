@@ -33,6 +33,7 @@ jmethodID renameMethod;
 jmethodID linkMethod;
 jmethodID unlinkMethod;
 jmethodID receivefileMethod;
+jmethodID sendfileMethod;
 jmethodID createMethod;
 
 
@@ -160,7 +161,7 @@ static int spade_receivefile(const char *remote_path, const char *remote_ip, con
     return 0;
 }
 
-static int spade_snedfile(const char *source_path, const char *dist_path, const char *dist_ip) {
+static int spade_sendfile(const char *source_path, const char *dist_path, const char *dist_ip) {
 
     (*jvm)->AttachCurrentThread(jvm, (void**) &env, NULL);
 
@@ -672,7 +673,7 @@ int bridge_sendfile(int sock) {
         strcpy(dist_ip, buffer);
     }
 
-    spade_receivefile(source_path, dist_path, dist_ip);
+    spade_sendfile(source_path, dist_path, dist_ip);
 
     return 1;
 }
