@@ -33,16 +33,11 @@ import spade.core.AbstractReporter;
 import spade.core.AbstractVertex;
 import spade.edge.opm.*;
 import spade.vertex.custom.File;
-import spade.vertex.custom.Network;
-import spade.vertex.custom.NetworkProc;
 import spade.vertex.custom.Program;
 import spade.vertex.opm.Agent;
 
 public class FusionFUSE extends AbstractReporter {
 
-	// CSHOU debug
-	private org.apache.log4j.Logger fsLogger = org.apache.log4j.Logger.getLogger(FusionFUSE.class);
-	
     private long boottime;
     private Map<String, AbstractVertex> localCache;
     private Map<String, String> links;
@@ -294,12 +289,6 @@ public class FusionFUSE extends AbstractReporter {
                 WasTriggeredBy triggerEdge = new WasTriggeredBy((Program) localCache.get(pid), (Program) localCache.get(ppid));
                 putEdge(triggerEdge);
             }
-            
-            // cshou debug
-            fsLogger.info("Putting program vertext:\n" + processVertex);
-            fsLogger.info("Putting temp agent vertex:\n" + tempAgent);
-            fsLogger.info("Putting WasControlledBy edge: between program vertex and temp agent");
-            
         } catch (Exception exception) {
             Logger.getLogger(FusionFUSE.class.getName()).log(Level.SEVERE, null, exception);
         }
@@ -315,11 +304,6 @@ public class FusionFUSE extends AbstractReporter {
      * not.
      */
     public void read(int pid, int iotime, String path, int link) {
-    	
-    	// cshou debug 
-    	fsLogger.info("Enter READ ================================");
-    	fsLogger.info("Trying to reach process with PID=" + pid);
-    	
         checkProgramTree(Integer.toString(pid));
         path = sanitizePath(path);
         long now = System.currentTimeMillis();
@@ -328,18 +312,10 @@ public class FusionFUSE extends AbstractReporter {
         // cause FUSE to crash.
         File fileVertex = (link == 1) ? createLinkVertex(path) : createFileVertex(path);
         putVertex(fileVertex);
-        
-        // cshou debug
-        fsLogger.info("Putting File vertext: \n" + fileVertex);
-        
         Used edge = new Used((Program) localCache.get(Integer.toString(pid)), fileVertex);
         edge.addAnnotation("iotime", Integer.toString(iotime));
         edge.addAnnotation("endtime", Long.toString(now));
         putEdge(edge);
-        
-        // cshou debug
-        fsLogger.info("Putting Used edge: \n" + edge);
-        
         // If the given path represents a link, then perform the same operation on the
         // artifact to which the link points.
         if (link == 1 && links.containsKey(path)) {
@@ -357,11 +333,6 @@ public class FusionFUSE extends AbstractReporter {
      * not.
      */
     public void write(int pid, int iotime, String path, int link) {
-    	
-    	// cshou debug 
-    	fsLogger.info("Enter WRITE ================================");
-    	fsLogger.info("Trying to reach process with PID=" + pid);
-    	
         checkProgramTree(Integer.toString(pid));
         path = sanitizePath(path);
         long now = System.currentTimeMillis();
@@ -370,18 +341,10 @@ public class FusionFUSE extends AbstractReporter {
         // cause FUSE to crash.
         File fileVertex = (link == 1) ? createLinkVertex(path) : createFileVertex(path);
         putVertex(fileVertex);
-        
-        // cshou debug
-        fsLogger.info("Putting File vertex:\n" + fileVertex);
-        
         WasGeneratedBy edge = new WasGeneratedBy(fileVertex, (Program) localCache.get(Integer.toString(pid)));
         edge.addAnnotation("iotime", Integer.toString(iotime));
         edge.addAnnotation("endtime", Long.toString(now));
         putEdge(edge);
-        
-        // cshou debug
-        fsLogger.info("Putting WasGeneratedBy edge:\n" + edge);
-        
         // If the given path represents a link, then perform the same operation on the
         // artifact to which the link points.
         if (link == 1 && links.containsKey(path)) {
@@ -505,98 +468,10 @@ public class FusionFUSE extends AbstractReporter {
         path = sanitizePath(path);
         links.remove(path);
     }
-    
-    /**
-     * @param remotePath remote path of the file
-     * @param remoteIP remote IP address
-     * @param localPath local path of the file, however in current design, it's same with remote path
-     */
-    public void receivefile(String remotePath, String remoteIP, String localPath) {
-    	
-    	// cshou debug 
-    	fsLogger.info("Enter RECEIVE FILE ================================");
-    	
-    	NetworkProc netProc = new NetworkProc();
-    	netProc.addAnnotation("source host", remoteIP);
-    	netProc.addAnnotation("destination host", localHostAddress);
-    	netProc.addAnnotation("source path", remotePath);
-    	netProc.addAnnotation("destination path", localPath);
-    	putVertex(netProc);
-    	
-    	fsLogger.info("Putting net process: " + netProc);
-    	
-    	File fileVertex = createFileVertex(localPath);
-    	putVertex(fileVertex);
-    	
-    	fsLogger.info("Putting file vertex:" + fileVertex);
-    	
-    	WasGeneratedBy generatedEdge = new WasGeneratedBy(fileVertex, netProc);
-    	
-    	putEdge(generatedEdge);
-    	
-    	fsLogger.info("Putting generated edge: " + generatedEdge);
-    }
-    
-    public void sendfile(String sourcePath, String distPath, String distIP) {
-    	
-    	// cshou debug
-    	fsLogger.info("Enter SEND FILE =========================");
-    	
-    	File fileVertex = createFileVertex(sourcePath);
-    	putVertex(fileVertex);
-    	
-    	fsLogger.info("Putting file vertex:" + fileVertex);
-    	
-    	NetworkProc netProc = new NetworkProc();
-    	netProc.addAnnotation("source host", localHostAddress);
-    	netProc.addAnnotation("destination host", distIP);
-    	netProc.addAnnotation("source path", sourcePath);
-    	netProc.addAnnotation("destination path", distPath);
-    	putVertex(netProc);
-    	
-    	fsLogger.info("Putting net process: " + netProc);
-    	
-    	Used edge = new Used(netProc, fileVertex);
-    	putEdge(edge);
-    	
-    	fsLogger.info("Putting generated edge: " + edge);
-    }
-    
-    /**
-     * @param path The path to the created file
-     * @param pid The PID of the creating process
-     */
-    public void create(String path, int pid) {
-    	
-    	// cshou debug 
-    	fsLogger.info("Enter CREATE ================================");
-    	fsLogger.info("Trying to reach process with PID=" + pid);
-    	
-    	checkProgramTree(Integer.toString(pid));
-        path = sanitizePath(path);
-        long now = System.currentTimeMillis();
-        // Create file artifact depending on whether this is a link or not.
-        // Link artifacts are created differently to avoid recursion that may
-        // cause FUSE to crash.
-        File fileVertex = createFileVertex(path);
-        putVertex(fileVertex);
-        
-        // cshou debug
-        fsLogger.info("Putting File vertext: \n" + fileVertex);
-        
-        WasGeneratedBy edge = new WasGeneratedBy(fileVertex, (Program)localCache.get(Integer.toString(pid)));
-        edge.addAnnotation("createtime", Long.toString(now));
-        putEdge(edge);
-        
-        // cshou debug
-        fsLogger.info("Putting Used edge: \n" + edge);
-
-    }
 
     private File createFileVertex(String path) {
         File fileVertex = new File();
         java.io.File file = new java.io.File(path);
-        fileVertex.addAnnotation("hostaddress", localHostAddress);
         fileVertex.addAnnotation("filename", file.getName());
         fileVertex.addAnnotation("path", path);
         long filesize = file.length();
