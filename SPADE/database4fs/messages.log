@@ -1,0 +1,268 @@
+2012-10-01 14:35:30.953-0500: Creating new db @ /home/cshou/DataSys/PAFS/SPADE/database4fs/neostore
+2012-10-01 14:35:32.596-0500: Opened [/home/cshou/DataSys/PAFS/SPADE/database4fs/nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
+2012-10-01 14:35:32.675-0500: Opened [/home/cshou/DataSys/PAFS/SPADE/database4fs/index/lucene.log.1] clean empty log, version=0, lastTxId=1
+2012-10-01 14:35:32.710-0500: TM new log: tm_tx_log.1
+2012-10-01 14:35:32.772-0500: --- CONFIGURATION START ---
+2012-10-01 14:35:32.772-0500: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1349120130959, id:-500147304107032058, store version: 13561656364791302]
+2012-10-01 14:35:32.772-0500: Physical mem: 4742MB, Heap size: 455MB
+2012-10-01 14:35:32.773-0500: Kernel version: Neo4j - Graph Database Kernel 1.5
+2012-10-01 14:35:32.774-0500: Neo4j component versions:
+2012-10-01 14:35:32.774-0500:   Neo4j - Graph Database Kernel 1.5
+2012-10-01 14:35:32.774-0500: Store versions:
+2012-10-01 14:35:32.774-0500:   NeoStore v0.A.0
+2012-10-01 14:35:32.774-0500:   NodeStore v0.A.0
+2012-10-01 14:35:32.774-0500:   RelationshipStore v0.A.0
+2012-10-01 14:35:32.774-0500:   RelationshipTypeStore v0.A.0
+2012-10-01 14:35:32.775-0500:   PropertyStore v0.A.0
+2012-10-01 14:35:32.775-0500:   PropertyIndexStore v0.A.0
+2012-10-01 14:35:32.775-0500:   StringPropertyStore v0.A.0
+2012-10-01 14:35:32.775-0500:   ArrayPropertyStore v0.A.0
+2012-10-01 14:35:32.778-0500: Process id: 1616@cshou-K53E
+2012-10-01 14:35:32.781-0500: Operating System: Linux; version: 3.2.0-31-generic; arch: amd64; cpus: 4
+2012-10-01 14:35:32.781-0500: Max number of file descriptors: 4096
+2012-10-01 14:35:32.781-0500: Number of open file descriptors: 109
+2012-10-01 14:35:32.782-0500: Total Physical memory: 4.63 GB
+2012-10-01 14:35:32.783-0500: Free Physical memory: 1.76 GB
+2012-10-01 14:35:32.783-0500: Committed virtual memory: 2.36 GB
+2012-10-01 14:35:32.783-0500: Total swap space: 3.78 GB
+2012-10-01 14:35:32.783-0500: Free swap space: 3.78 GB
+2012-10-01 14:35:32.784-0500: Byte order: LITTLE_ENDIAN
+2012-10-01 14:35:32.784-0500: VM Name: OpenJDK 64-Bit Server VM
+2012-10-01 14:35:32.784-0500: VM Vendor: Oracle Corporation
+2012-10-01 14:35:32.784-0500: VM Version: 23.2-b09
+2012-10-01 14:35:32.784-0500: JIT compiler: HotSpot 64-Bit Tiered Compilers
+2012-10-01 14:35:32.796-0500: Class Path:
+2012-10-01 14:35:32.796-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/lucene-core-3.1.0.jar
+2012-10-01 14:35:32.796-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunpkcs11.jar
+2012-10-01 14:35:32.796-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/asm-3.1.jar
+2012-10-01 14:35:32.796-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-shell-1.5.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jetty-6.1.25.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jersey-multipart-1.9.jar
+2012-10-01 14:35:32.797-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jackson-mapper-asl-1.8.3.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/server-api-1.5.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-lucene-index-1.5.jar
+2012-10-01 14:35:32.797-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+2012-10-01 14:35:32.797-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libFusionFUSE.so
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jackson-core-asl-1.8.3.jar
+2012-10-01 14:35:32.798-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/org.apache.servicemix.bundles.jline-0.9.94_1.jar
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jersey-server-1.9.jar
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/geronimo-jta_1.1_spec-1.1.1.jar
+2012-10-01 14:35:32.798-0500:    [loader.1] file:/usr/lib/x86_64-linux-gnu/jni/libatk-wrapper.so.0.0.18
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jersey-core-1.9.jar
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-digester-1.8.1.jar
+2012-10-01 14:35:32.798-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/gremlin-1.3.jar
+2012-10-01 14:35:32.799-0500:    [loader.1] file:/usr/share/java/java-atk-wrapper.jar
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-linux-ppc-64.so
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/wrapper.jar
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-server-1.5.jar
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/build/
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-cypher-plugin-1.5.jar
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-lang-2.4.jar
+2012-10-01 14:35:32.799-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-macosx-universal-64.jnilib
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-linux-x86-32.so
+2012-10-01 14:35:32.800-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunjce_provider.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/asm-util-3.2.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/slf4j-api-1.6.1.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jackson-jaxrs-1.8.3.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/mimepull-1.6.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jetty-util-6.1.25.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jcl-over-slf4j-1.6.1.jar
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-linux-ppc-32.so
+2012-10-01 14:35:32.800-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jline-0.9.94.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-graph-algo-1.5.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jansi-1.5.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/asm-commons-3.2.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-community-1.5.jar
+2012-10-01 14:35:32.801-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/pipes-0.8.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/rrd4j-2.0.7.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-udc-1.5.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-graph-matching-1.5.jar
+2012-10-01 14:35:32.801-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-cypher-1.5.jar
+2012-10-01 14:35:32.802-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/localedata.jar
+2012-10-01 14:35:32.802-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-io-1.4.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-linux-ia-64.so
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jsr311-api-1.1.1.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-beanutils-core-1.8.0.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/groovy-1.8.2.jar
+2012-10-01 14:35:32.802-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/dnsns.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-gremlin-plugin-1.5.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/asm-tree-3.2.jar
+2012-10-01 14:35:32.802-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/scala-library-2.9.0-1.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/log4j-over-slf4j-1.6.1.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-server-1.5-static-web.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-collections-3.2.1.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/servlet-api-2.5-20081211.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/blueprints-neo4j-graph-1.0.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/antlr-2.7.7.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/h2-1.3.162.jar
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/wrapper-windows-x86-32.dll
+2012-10-01 14:35:32.803-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/stax-api-1.0.1.jar
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-configuration-1.6.jar
+2012-10-01 14:35:32.804-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/asm-analysis-3.2.jar
+2012-10-01 14:35:32.804-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-macosx-universal-32.jnilib
+2012-10-01 14:35:32.804-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-kernel-1.5.jar
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libLinuxFUSE.so
+2012-10-01 14:35:32.804-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-logging-1.1.1.jar
+2012-10-01 14:35:32.804-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+2012-10-01 14:35:32.805-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/pulse-java.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/slf4j-jdk14-1.6.1.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/blueprints-core-1.0.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/libwrapper-linux-x86-64.so
+2012-10-01 14:35:32.805-0500:    [bootstrap] /usr/lib/jvm/java-7-openjdk-common/jre/lib/resources.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/neo4j-jmx-1.5.jar
+2012-10-01 14:35:32.805-0500:    [loader.1] file:/usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/zipfs.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/jettison-1.3.jar
+2012-10-01 14:35:32.805-0500:    [classpath + loader.0] file:/home/cshou/DataSys/PAFS/SPADE/lib/commons-beanutils-1.8.0.jar
+2012-10-01 14:35:32.806-0500: Library Path:
+2012-10-01 14:35:32.806-0500:   /home/cshou/DataSys/PAFS/SPADE/lib
+2012-10-01 14:35:32.806-0500: Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+2012-10-01 14:35:32.806-0500: Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+2012-10-01 14:35:32.807-0500: Memory Pool: Code Cache (Non-heap memory): committed=2.44 MB, used=514.38 kB, max=48.00 MB, threshold=0.00 B
+2012-10-01 14:35:32.808-0500: Memory Pool: PS Eden Space (Heap memory): committed=32.00 MB, used=24.43 MB, max=160.00 MB, threshold=?
+2012-10-01 14:35:32.809-0500: Memory Pool: PS Survivor Space (Heap memory): committed=5.31 MB, used=0.00 B, max=5.31 MB, threshold=?
+2012-10-01 14:35:32.810-0500: Memory Pool: PS Old Gen (Heap memory): committed=85.38 MB, used=0.00 B, max=341.38 MB, threshold=0.00 B
+2012-10-01 14:35:32.811-0500: Memory Pool: PS Perm Gen (Non-heap memory): committed=20.75 MB, used=8.57 MB, max=166.00 MB, threshold=0.00 B
+2012-10-01 14:35:32.811-0500: VM Arguments: [-Xms128m, -Xmx512m, -Djava.library.path=../../lib, -Dwrapper.key=x40XC6KiHjG_A-jA, -Dwrapper.port=32000, -Dwrapper.jvm.port.min=31000, -Dwrapper.jvm.port.max=31999, -Dwrapper.pid=1614, -Dwrapper.version=3.5.13, -Dwrapper.native_library=wrapper, -Dwrapper.cpu.timeout=10, -Dwrapper.jvmid=1]
+2012-10-01 14:35:32.811-0500: System properties:
+2012-10-01 14:35:32.812-0500:   sun.boot.library.path = /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+2012-10-01 14:35:32.812-0500:   path.separator = :
+2012-10-01 14:35:32.812-0500:   file.encoding.pkg = sun.io
+2012-10-01 14:35:32.812-0500:   user.country = US
+2012-10-01 14:35:32.812-0500:   sun.java.launcher = SUN_STANDARD
+2012-10-01 14:35:32.812-0500:   sun.os.patch.level = unknown
+2012-10-01 14:35:32.812-0500:   wrapper.key = x40XC6KiHjG_A-jA
+2012-10-01 14:35:32.812-0500:   user.dir = /home/cshou/DataSys/PAFS/SPADE/bin/jsw
+2012-10-01 14:35:32.812-0500:   wrapper.version = 3.5.13
+2012-10-01 14:35:32.813-0500:   wrapper.cpu.timeout = 10
+2012-10-01 14:35:32.813-0500:   sun.jnu.encoding = UTF-8
+2012-10-01 14:35:32.813-0500:   wrapper.jvm.port.max = 31999
+2012-10-01 14:35:32.813-0500:   sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2012-10-01 14:35:32.813-0500:   wrapper.pid = 1614
+2012-10-01 14:35:32.813-0500:   wrapper.java.pid = 1616
+2012-10-01 14:35:32.813-0500:   user.home = /home/cshou
+2012-10-01 14:35:32.813-0500:   wrapper.jvmid = 1
+2012-10-01 14:35:32.813-0500:   user.timezone = America/Chicago
+2012-10-01 14:35:32.813-0500:   file.encoding = UTF-8
+2012-10-01 14:35:32.813-0500:   user.name = cshou
+2012-10-01 14:35:32.814-0500:   wrapper.port = 32000
+2012-10-01 14:35:32.814-0500:   sun.java.command = org.tanukisoftware.wrapper.WrapperSimpleApp spade.core.Kernel
+2012-10-01 14:35:32.814-0500:   sun.arch.data.model = 64
+2012-10-01 14:35:32.814-0500:   user.language = en
+2012-10-01 14:35:32.814-0500:   awt.toolkit = sun.awt.X11.XToolkit
+2012-10-01 14:35:32.814-0500:   file.separator = /
+2012-10-01 14:35:32.814-0500:   sun.io.unicode.encoding = UnicodeLittle
+2012-10-01 14:35:32.814-0500:   sun.cpu.endian = little
+2012-10-01 14:35:32.814-0500:   wrapper.native_library = wrapper
+2012-10-01 14:35:32.814-0500:   wrapper.jvm.port.min = 31000
+2012-10-01 14:35:32.815-0500:   sun.desktop = gnome
+2012-10-01 14:35:32.815-0500:   sun.cpu.isalist = 
+2012-10-01 14:35:32.815-0500: Neo4j Kernel properties:
+2012-10-01 14:35:32.815-0500:   store_dir=/home/cshou/DataSys/PAFS/SPADE/database4fs
+2012-10-01 14:35:32.815-0500:   logical_log=/home/cshou/DataSys/PAFS/SPADE/database4fs/nioneo_logical.log
+2012-10-01 14:35:32.815-0500:   node_auto_indexing=false
+2012-10-01 14:35:32.815-0500:   neostore.relationshipstore.db.mapped_memory=100M
+2012-10-01 14:35:32.815-0500:   neostore.nodestore.db.mapped_memory=20M
+2012-10-01 14:35:32.815-0500:   use_memory_mapped_buffers=true
+2012-10-01 14:35:32.815-0500:   rebuild_idgenerators_fast=true
+2012-10-01 14:35:32.815-0500:   neostore.propertystore.db.index.keys.mapped_memory=1M
+2012-10-01 14:35:32.816-0500:   neostore.propertystore.db.arrays.mapped_memory=130M
+2012-10-01 14:35:32.816-0500:   neostore.propertystore.db.strings.mapped_memory=130M
+2012-10-01 14:35:32.816-0500:   neo_store=/home/cshou/DataSys/PAFS/SPADE/database4fs/neostore
+2012-10-01 14:35:32.816-0500:   neostore.propertystore.db.index.mapped_memory=1M
+2012-10-01 14:35:32.816-0500:   create=true
+2012-10-01 14:35:32.816-0500:   neostore.propertystore.db.mapped_memory=90M
+2012-10-01 14:35:32.816-0500:   relationship_auto_indexing=false
+2012-10-01 14:35:32.816-0500:   allow_store_upgrade=true
+2012-10-01 14:35:32.816-0500: Storage files:
+2012-10-01 14:35:32.817-0500:   neostore.propertystore.db.arrays.id: 9.00 B
+2012-10-01 14:35:32.817-0500:   neostore.nodestore.db.id: 9.00 B
+2012-10-01 14:35:32.817-0500:   nioneo_logical.log.1: 16.00 B
+2012-10-01 14:35:32.817-0500:   neostore.relationshiptypestore.db.id: 9.00 B
+2012-10-01 14:35:32.817-0500:   neostore.propertystore.db.index.id: 9.00 B
+2012-10-01 14:35:32.817-0500:   neostore.propertystore.db.index: 0.00 B
+2012-10-01 14:35:32.818-0500:   neostore.propertystore.db.arrays: 128.00 B
+2012-10-01 14:35:32.818-0500:   neostore.relationshiptypestore.db.names.id: 9.00 B
+2012-10-01 14:35:32.818-0500:   neostore.propertystore.db.index.keys.id: 9.00 B
+2012-10-01 14:35:32.818-0500:   tm_tx_log.1: 0.00 B
+2012-10-01 14:35:32.818-0500:   neostore.nodestore.db: 9.00 B
+2012-10-01 14:35:32.818-0500:   neostore.relationshipstore.db.id: 9.00 B
+2012-10-01 14:35:32.819-0500:   neostore.relationshiptypestore.db: 0.00 B
+2012-10-01 14:35:32.819-0500:   neostore.propertystore.db.strings.id: 9.00 B
+2012-10-01 14:35:32.819-0500:   neostore.relationshiptypestore.db.names: 38.00 B
+2012-10-01 14:35:32.819-0500:   neostore.propertystore.db.index.keys: 38.00 B
+2012-10-01 14:35:32.819-0500:   neostore.propertystore.db: 0.00 B
+2012-10-01 14:35:32.819-0500:   neostore.propertystore.db.strings: 128.00 B
+2012-10-01 14:35:32.820-0500:   neostore.propertystore.db.id: 9.00 B
+2012-10-01 14:35:32.820-0500:   nioneo_logical.log.active: 4.00 B
+2012-10-01 14:35:32.820-0500:   neostore.relationshipstore.db: 0.00 B
+2012-10-01 14:35:32.820-0500:   lock: 0.00 B
+2012-10-01 14:35:32.820-0500:   active_tx_log: 11.00 B
+2012-10-01 14:35:32.820-0500:   index:
+2012-10-01 14:35:32.821-0500:     lucene.log.active: 4.00 B
+2012-10-01 14:35:32.821-0500:     lucene-store.db: 32.00 B
+2012-10-01 14:35:32.821-0500:     lucene.log.1: 16.00 B
+2012-10-01 14:35:32.821-0500:   - Total: 52.00 B
+2012-10-01 14:35:32.821-0500:   messages.log: 18.67 kB
+2012-10-01 14:35:32.821-0500:   neostore.id: 9.00 B
+2012-10-01 14:35:32.822-0500:   neostore: 45.00 B
+2012-10-01 14:35:32.822-0500: Id usage:
+2012-10-01 14:35:32.822-0500:   NodeStore: used=1 high=0
+2012-10-01 14:35:32.822-0500:   RelationshipStore: used=0 high=-1
+2012-10-01 14:35:32.822-0500:   RelationshipTypeStore: used=0 high=-1
+2012-10-01 14:35:32.822-0500:   PropertyStore: used=0 high=-1
+2012-10-01 14:35:32.823-0500:   PropertyIndexStore: used=0 high=-1
+2012-10-01 14:35:32.823-0500:   StringPropertyStore: used=1 high=0
+2012-10-01 14:35:32.823-0500:   ArrayPropertyStore: used=1 high=0
+2012-10-01 14:35:32.826-0500: Schedulers:   none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  none
+  noop deadline [cfq] 
+  noop deadline [cfq] 
+  noop deadline [cfq] 
+
+2012-10-01 14:35:32.826-0500: --- CONFIGURATION END ---
+2012-10-01 14:35:32.871-0500: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2012-10-01 14:35:32.872-0500: Extension org.neo4j.kernel.KernelExtension[shell] loaded ok
+2012-10-01 14:35:32.873-0500: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2012-10-01 14:35:33.114-0500: --- SERVER STARTUP START ---
+2012-10-01 14:35:33.114-0500: Server configuration:
+2012-10-01 14:35:33.115-0500:   org.neo4j.server.database.location = /home/cshou/DataSys/PAFS/SPADE/database4fs
+2012-10-01 14:35:33.135-0500: Mounted discovery module (org.neo4j.server.rest.discovery) at: /
+2012-10-01 14:35:33.179-0500: Loaded server plugin "CypherPlugin" (org.neo4j.server.plugin.cypher.CypherPlugin)
+2012-10-01 14:35:33.182-0500:   GraphDatabaseService.execute_query: execute a query
+2012-10-01 14:35:33.183-0500: Loaded server plugin "GremlinPlugin" (org.neo4j.server.plugin.gremlin.GremlinPlugin)
+2012-10-01 14:35:33.183-0500:   GraphDatabaseService.execute_script: execute a Gremlin script with 'g' set to the Neo4jGraph and 'results' containing the results. Only results of one object type is supported.
+2012-10-01 14:35:33.184-0500: Mounted REST API at: /db/data
+2012-10-01 14:35:33.186-0500: Mounted management API at: /db/manage
+2012-10-01 14:35:33.230-0500: Mounted webadmin at: /webadmin
+2012-10-01 14:35:34.697-0500: Server started on: http://localhost:7474/
+2012-10-01 14:35:34.698-0500: --- SERVER STARTUP END ---

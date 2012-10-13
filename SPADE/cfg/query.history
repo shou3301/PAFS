@@ -1,0 +1,4 @@
+query Neo4j vertices type:Process
+exit
+query Neo4j lineage 1 10 ancestors null /home/cshou/SPADE/mountPoint/test/test.txt
+exit

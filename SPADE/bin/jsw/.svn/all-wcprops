@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw
+END
+wrapper-linux-ia-64
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-linux-ia-64
+END
+wrapper-windows-x86-32.exe
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-windows-x86-32.exe
+END
+wrapper-linux-ppc-32
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-linux-ppc-32
+END
+wrapper-macosx-universal-32
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-macosx-universal-32
+END
+wrapper-linux-x86-32
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-linux-x86-32
+END
+wrapper-linux-ppc-64
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-linux-ppc-64
+END
+wrapper-macosx-universal-64
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-macosx-universal-64
+END
+wrapper-linux-x86-64
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/460/trunk/SPADE/bin/jsw/wrapper-linux-x86-64
+END

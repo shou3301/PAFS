@@ -1,0 +1,256 @@
+STATUS | wrapper  | 2012/10/01 11:23:21 | --> Wrapper Started as Console
+STATUS | wrapper  | 2012/10/01 11:23:21 | Java Service Wrapper Community Edition 64-bit 3.5.13
+STATUS | wrapper  | 2012/10/01 11:23:21 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2012/10/01 11:23:21 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2012/10/01 11:23:21 | 
+STATUS | wrapper  | 2012/10/01 11:23:22 | Launching a JVM...
+INFO   | jvm 1    | 2012/10/01 11:23:22 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Starting Neo Server on port [7474] with [60] threads available
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Using database at /home/cshou/DataSys/PAFS/SPADE/database4fs
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | WARNING: No database tuning properties set in the property file, using defaults. Please specify the performance properties file with org.neo4j.server.db.tuning.properties in the server properties file [null].
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Mounted discovery module at [/]
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Loaded server plugin "CypherPlugin"
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Loaded server plugin "GremlinPlugin"
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Mounted REST API at [/db/data]
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Mounted management API at [/db/manage]
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Mounted webadmin at [/webadmin]
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Mounting static content at [/webadmin] from [webadmin-html]
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: jetty-6.1.25
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 11:23:25 |   org.neo4j.server.webadmin.rest
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 11:23:25 |   class org.neo4j.server.webadmin.rest.JmxService
+INFO   | jvm 1    | 2012/10/01 11:23:25 |   class org.neo4j.server.webadmin.rest.MonitorService
+INFO   | jvm 1    | 2012/10/01 11:23:25 |   class org.neo4j.server.webadmin.rest.RootService
+INFO   | jvm 1    | 2012/10/01 11:23:25 |   class org.neo4j.server.webadmin.rest.ConsoleService
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: No provider classes found.
+INFO   | jvm 1    | 2012/10/01 11:23:25 | Oct 01, 2012 11:23:25 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 11:23:25 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   org.neo4j.server.rest.web
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.ResourcesService
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.RestfulGraphDatabase
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.BatchOperationService
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.ExtensionService
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.DatabaseMetadataService
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Provider classes found:
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.web.DatabaseBlockedExceptionMapper
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   org.neo4j.server.rest.discovery
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 11:23:26 |   class org.neo4j.server.rest.discovery.DiscoveryService
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: No provider classes found.
+INFO   | jvm 1    | 2012/10/01 11:23:26 | Oct 01, 2012 11:23:26 AM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 11:23:26 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Oct 01, 2012 11:23:26 AM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 11:23:27 | INFO: Started SelectChannelConnector@localhost:7474
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Oct 01, 2012 11:23:26 AM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 11:23:27 | INFO: Server started on [http://localhost:7474/]
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Load class FusionFUSE successfully!
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Ready to launch FusionFUSE
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Loading C FusionFUSE library...
+INFO   | jvm 1    | 2012/10/01 11:23:27 | Launching FusionFUSE Server thread...
+INFO   | jvm 1    | 2012/10/01 11:24:46 | Received a file -> remotePath=/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/omgomg || remoteIP= || localPath=/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/omgomg
+INFO   | jvm 1    | 2012/10/01 11:25:07 | Write get called -> pid=6042 || iotime=29 || path=/omgomg
+INFO   | jvm 1    | 2012/10/01 11:26:29 | Read get called -> pid=6045 || iotime=10 || path=/omgomg
+INFO   | jvm 1    | 2012/10/01 11:26:29 | Oct 01, 2012 11:26:29 AM spade.reporter.FusionFUSE createProgramVertex
+INFO   | jvm 1    | 2012/10/01 11:26:29 | SEVERE: null
+INFO   | jvm 1    | 2012/10/01 11:26:29 | java.io.IOException: No such process
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.FileInputStream.readBytes(Native Method)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.FileInputStream.read(FileInputStream.java:242)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:283)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:325)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:177)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.BufferedReader.fill(BufferedReader.java:154)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.BufferedReader.readLine(BufferedReader.java:317)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at java.io.BufferedReader.readLine(BufferedReader.java:382)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at spade.reporter.FusionFUSE.createProgramVertex(FusionFUSE.java:170)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at spade.reporter.FusionFUSE.checkProgramTree(FusionFUSE.java:272)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 	at spade.reporter.FusionFUSE.read(FusionFUSE.java:309)
+INFO   | jvm 1    | 2012/10/01 11:26:29 | 
+INFO   | jvm 1    | 2012/10/01 11:26:29 | Oct 01, 2012 11:26:29 AM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 11:26:29 | WARNING: Not putting edge. Source is null
+INFO   | jvm 1    | 2012/10/01 11:26:29 | Oct 01, 2012 11:26:29 AM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 11:26:29 | WARNING: Not putting edge. End vertices are equal
+INFO   | jvm 1    | 2012/10/01 11:34:57 | Received a file -> remotePath=/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/omg || remoteIP= || localPath=/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/omg
+INFO   | jvm 1    | 2012/10/01 11:35:18 | Write get called -> pid=6111 || iotime=35 || path=/omg
+INFO   | jvm 1    | 2012/10/01 11:37:29 | Read get called -> pid=6126 || iotime=10 || path=/omg
+INFO   | jvm 1    | 2012/10/01 11:37:29 | Oct 01, 2012 11:37:29 AM spade.reporter.FusionFUSE createProgramVertex
+INFO   | jvm 1    | 2012/10/01 11:37:29 | SEVERE: null
+INFO   | jvm 1    | 2012/10/01 11:37:29 | java.io.FileNotFoundException: /proc/6126/status (No such file or directory)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at java.io.FileInputStream.open(Native Method)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at java.io.FileInputStream.<init>(FileInputStream.java:97)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at java.io.FileReader.<init>(FileReader.java:58)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at spade.reporter.FusionFUSE.createProgramVertex(FusionFUSE.java:169)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at spade.reporter.FusionFUSE.checkProgramTree(FusionFUSE.java:272)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 	at spade.reporter.FusionFUSE.read(FusionFUSE.java:309)
+INFO   | jvm 1    | 2012/10/01 11:37:29 | 
+INFO   | jvm 1    | 2012/10/01 11:37:29 | Oct 01, 2012 11:37:29 AM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 11:37:29 | WARNING: Not putting edge. Source is null
+INFO   | jvm 1    | 2012/10/01 11:37:29 | Oct 01, 2012 11:37:29 AM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 11:37:29 | WARNING: Not putting edge. End vertices are equal
+STATUS | wrapper  | 2012/10/01 12:08:31 | TERM trapped.  Shutting down.
+ERROR  | wrapper  | 2012/10/01 12:08:50 | Shutdown failed: Timed out waiting for the JVM to terminate.
+ERROR  | wrapper  | 2012/10/01 12:08:50 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2012/10/01 12:08:50 | <-- Wrapper Stopped
+STATUS | wrapper  | 2012/10/01 14:35:30 | --> Wrapper Started as Console
+STATUS | wrapper  | 2012/10/01 14:35:30 | Java Service Wrapper Community Edition 64-bit 3.5.13
+STATUS | wrapper  | 2012/10/01 14:35:30 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2012/10/01 14:35:30 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2012/10/01 14:35:30 | 
+STATUS | wrapper  | 2012/10/01 14:35:30 | Launching a JVM...
+INFO   | jvm 1    | 2012/10/01 14:35:30 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Starting Neo Server on port [7474] with [40] threads available
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Using database at /home/cshou/DataSys/PAFS/SPADE/database4fs
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | WARNING: No database tuning properties set in the property file, using defaults. Please specify the performance properties file with org.neo4j.server.db.tuning.properties in the server properties file [null].
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Mounted discovery module at [/]
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Loaded server plugin "CypherPlugin"
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Loaded server plugin "GremlinPlugin"
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Mounted REST API at [/db/data]
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Mounted management API at [/db/manage]
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Mounted webadmin at [/webadmin]
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Mounting static content at [/webadmin] from [webadmin-html]
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: jetty-6.1.25
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 14:35:33 |   org.neo4j.server.webadmin.rest
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 14:35:33 |   class org.neo4j.server.webadmin.rest.RootService
+INFO   | jvm 1    | 2012/10/01 14:35:33 |   class org.neo4j.server.webadmin.rest.MonitorService
+INFO   | jvm 1    | 2012/10/01 14:35:33 |   class org.neo4j.server.webadmin.rest.JmxService
+INFO   | jvm 1    | 2012/10/01 14:35:33 |   class org.neo4j.server.webadmin.rest.ConsoleService
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: No provider classes found.
+INFO   | jvm 1    | 2012/10/01 14:35:33 | Oct 01, 2012 2:35:33 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 14:35:33 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   org.neo4j.server.rest.web
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.RestfulGraphDatabase
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.ResourcesService
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.BatchOperationService
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.ExtensionService
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.DatabaseMetadataService
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Provider classes found:
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.web.DatabaseBlockedExceptionMapper
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.PackagesResourceConfig init
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Scanning for root resource and provider classes in the packages:
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   org.neo4j.server.rest.discovery
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Root resource classes found:
+INFO   | jvm 1    | 2012/10/01 14:35:34 |   class org.neo4j.server.rest.discovery.DiscoveryService
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.api.core.ScanningResourceConfig init
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: No provider classes found.
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM org.mortbay.log.Slf4jLog info
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Started SelectChannelConnector@localhost:7474
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Oct 01, 2012 2:35:34 PM org.neo4j.server.logging.Logger log
+INFO   | jvm 1    | 2012/10/01 14:35:34 | INFO: Server started on [http://localhost:7474/]
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Load class FusionFUSE successfully!
+INFO   | jvm 1    | 2012/10/01 14:35:34 | Ready to launch FusionFUSE
+INFO   | jvm 1    | 2012/10/01 14:46:16 | Load class FusionFUSE successfully!
+INFO   | jvm 1    | 2012/10/01 14:46:16 | Ready to launch FusionFUSE
+INFO   | jvm 1    | 2012/10/01 14:46:58 | Load class FusionFUSE successfully!
+INFO   | jvm 1    | 2012/10/01 14:46:58 | Ready to launch FusionFUSE
+INFO   | jvm 1    | 2012/10/01 14:50:38 | Oct 01, 2012 2:50:38 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:50:38 | INFO: Enter RECEIVE FILE ================================
+INFO   | jvm 1    | 2012/10/01 14:50:38 | Oct 01, 2012 2:50:38 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:50:38 | INFO: Putting remote File vertex:
+INFO   | jvm 1    | 2012/10/01 14:50:38 | type:Artifact|subtype:File|hostaddress:216.47.142.248|filename:love|path:/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love|size:13|lastmodified_unix:1349121038000|lastmodified_simple:Mon Oct 1 14:50:38 2012
+INFO   | jvm 1    | 2012/10/01 14:50:38 | Oct 01, 2012 2:50:38 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:50:38 | INFO: Putting local File vertex:
+INFO   | jvm 1    | 2012/10/01 14:50:38 | type:Artifact|subtype:File|hostaddress:127.0.0.1|filename:love|path:/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love|size:13|lastmodified_unix:1349121038000|lastmodified_simple:Mon Oct 1 14:50:38 2012
+INFO   | jvm 1    | 2012/10/01 14:50:38 | Oct 01, 2012 2:50:38 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:50:38 | INFO: Putting WasTransferredFrom egde:
+INFO   | jvm 1    | 2012/10/01 14:50:38 | type:WasTransferredFrom
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Enter RECEIVE FILE ================================
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE read
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Enter READ ================================
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Putting remote File vertex:
+INFO   | jvm 1    | 2012/10/01 14:51:35 | type:Artifact|subtype:File|hostaddress:216.47.142.248|filename:love|path:/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love|size:0|lastmodified_unix:0|lastmodified_simple:Wed Dec 31 18:00:00 1969
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE read
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Trying to reach process with PID=7224
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Putting local File vertex:
+INFO   | jvm 1    | 2012/10/01 14:51:35 | type:Artifact|subtype:File|hostaddress:127.0.0.1|filename:love|path:/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love|size:0|lastmodified_unix:0|lastmodified_simple:Wed Dec 31 18:00:00 1969
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE createProgramVertex
+INFO   | jvm 1    | 2012/10/01 14:51:35 | SEVERE: null
+INFO   | jvm 1    | 2012/10/01 14:51:35 | java.io.FileNotFoundException: /proc/7224/status (No such file or directory)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at java.io.FileInputStream.open(Native Method)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at java.io.FileInputStream.<init>(FileInputStream.java:97)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at java.io.FileReader.<init>(FileReader.java:58)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at spade.reporter.FusionFUSE.createProgramVertex(FusionFUSE.java:175)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at spade.reporter.FusionFUSE.checkProgramTree(FusionFUSE.java:278)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 	at spade.reporter.FusionFUSE.read(FusionFUSE.java:321)
+INFO   | jvm 1    | 2012/10/01 14:51:35 | 
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE receivefile
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Putting WasTransferredFrom egde:
+INFO   | jvm 1    | 2012/10/01 14:51:35 | type:WasTransferredFrom
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE read
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Putting File vertext: 
+INFO   | jvm 1    | 2012/10/01 14:51:35 | type:Artifact|subtype:File|hostaddress:127.0.0.1|filename:love|path:/love|size:0|lastmodified_unix:0|lastmodified_simple:Wed Dec 31 18:00:00 1969
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 14:51:35 | WARNING: Not putting edge. Source is null
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.core.Buffer putEdge
+INFO   | jvm 1    | 2012/10/01 14:51:35 | WARNING: Not putting edge. End vertices are equal
+INFO   | jvm 1    | 2012/10/01 14:51:35 | Oct 01, 2012 2:51:35 PM spade.reporter.FusionFUSE read
+INFO   | jvm 1    | 2012/10/01 14:51:35 | INFO: Putting Used edge: 
+INFO   | jvm 1    | 2012/10/01 14:51:35 | type:Used|iotime:10|endtime:1349121095360
+STATUS | wrapper  | 2012/10/01 15:03:33 | TERM trapped.  Shutting down.
+ERROR  | wrapper  | 2012/10/01 15:03:53 | Shutdown failed: Timed out waiting for the JVM to terminate.
+ERROR  | wrapper  | 2012/10/01 15:03:53 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2012/10/01 15:03:53 | <-- Wrapper Stopped

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605090</millis>
+  <sequence>0</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Starting Neo Server on port [7474] with [60] threads available</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605131</millis>
+  <sequence>1</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605135</millis>
+  <sequence>2</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Using database at /home/cshou/DataSys/PAFS/SPADE/database4fs</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605137</millis>
+  <sequence>3</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>WARNING</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>No database tuning properties set in the property file, using defaults. Please specify the performance properties file with org.neo4j.server.db.tuning.properties in the server properties file [null].</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605159</millis>
+  <sequence>4</sequence>
+  <logger>org.neo4j.server.modules.DiscoveryModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted discovery module at [/]</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605206</millis>
+  <sequence>5</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "CypherPlugin"</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605208</millis>
+  <sequence>6</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "GremlinPlugin"</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605210</millis>
+  <sequence>7</sequence>
+  <logger>org.neo4j.server.modules.RESTApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted REST API at [/db/data]</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605211</millis>
+  <sequence>8</sequence>
+  <logger>org.neo4j.server.modules.ManagementApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted management API at [/db/manage]</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605265</millis>
+  <sequence>9</sequence>
+  <logger>org.neo4j.server.modules.WebAdminModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted webadmin at [/webadmin]</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605278</millis>
+  <sequence>10</sequence>
+  <logger>org.neo4j.server.web.Jetty6WebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounting static content at [/webadmin] from [webadmin-html]</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605301</millis>
+  <sequence>11</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>jetty-6.1.25</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605496</millis>
+  <sequence>12</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605647</millis>
+  <sequence>13</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.webadmin.rest</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605722</millis>
+  <sequence>14</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.webadmin.rest.JmxService
+  class org.neo4j.server.webadmin.rest.MonitorService
+  class org.neo4j.server.webadmin.rest.RootService
+  class org.neo4j.server.webadmin.rest.ConsoleService</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605723</millis>
+  <sequence>15</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:25</date>
+  <millis>1349108605818</millis>
+  <sequence>16</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606431</millis>
+  <sequence>17</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.web</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606471</millis>
+  <sequence>18</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.web.ResourcesService
+  class org.neo4j.server.rest.web.RestfulGraphDatabase
+  class org.neo4j.server.rest.web.BatchOperationService
+  class org.neo4j.server.rest.web.ExtensionService
+  class org.neo4j.server.rest.web.DatabaseMetadataService</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606472</millis>
+  <sequence>19</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Provider classes found:
+  class org.neo4j.server.rest.web.DatabaseBlockedExceptionMapper</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606475</millis>
+  <sequence>20</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606730</millis>
+  <sequence>21</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.discovery</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606755</millis>
+  <sequence>22</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.discovery.DiscoveryService</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606756</millis>
+  <sequence>23</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606759</millis>
+  <sequence>24</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606987</millis>
+  <sequence>25</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Started SelectChannelConnector@localhost:7474</message>
+</record>
+<record>
+  <date>2012-10-01T11:23:26</date>
+  <millis>1349108606990</millis>
+  <sequence>26</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Server started on [http://localhost:7474/]</message>
+</record>
+<record>
+  <date>2012-10-01T11:26:29</date>
+  <millis>1349108789579</millis>
+  <sequence>27</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>SEVERE</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>createProgramVertex</method>
+  <thread>36</thread>
+  <exception>
+    <message>java.io.IOException: No such process</message>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>readBytes</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>read</method>
+      <line>242</line>
+    </frame>
+    <frame>
+      <class>sun.nio.cs.StreamDecoder</class>
+      <method>readBytes</method>
+      <line>283</line>
+    </frame>
+    <frame>
+      <class>sun.nio.cs.StreamDecoder</class>
+      <method>implRead</method>
+      <line>325</line>
+    </frame>
+    <frame>
+      <class>sun.nio.cs.StreamDecoder</class>
+      <method>read</method>
+      <line>177</line>
+    </frame>
+    <frame>
+      <class>java.io.InputStreamReader</class>
+      <method>read</method>
+      <line>184</line>
+    </frame>
+    <frame>
+      <class>java.io.BufferedReader</class>
+      <method>fill</method>
+      <line>154</line>
+    </frame>
+    <frame>
+      <class>java.io.BufferedReader</class>
+      <method>readLine</method>
+      <line>317</line>
+    </frame>
+    <frame>
+      <class>java.io.BufferedReader</class>
+      <method>readLine</method>
+      <line>382</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>createProgramVertex</method>
+      <line>170</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>checkProgramTree</method>
+      <line>272</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>read</method>
+      <line>309</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2012-10-01T11:26:29</date>
+  <millis>1349108789586</millis>
+  <sequence>28</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>36</thread>
+  <message>Not putting edge. Source is null</message>
+</record>
+<record>
+  <date>2012-10-01T11:26:29</date>
+  <millis>1349108789589</millis>
+  <sequence>29</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>36</thread>
+  <message>Not putting edge. End vertices are equal</message>
+</record>
+<record>
+  <date>2012-10-01T11:37:29</date>
+  <millis>1349109449115</millis>
+  <sequence>30</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>SEVERE</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>createProgramVertex</method>
+  <thread>42</thread>
+  <exception>
+    <message>java.io.FileNotFoundException: /proc/6126/status (No such file or directory)</message>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>138</line>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>java.io.FileReader</class>
+      <method>&lt;init&gt;</method>
+      <line>58</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>createProgramVertex</method>
+      <line>169</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>checkProgramTree</method>
+      <line>272</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>read</method>
+      <line>309</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2012-10-01T11:37:29</date>
+  <millis>1349109449119</millis>
+  <sequence>31</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>42</thread>
+  <message>Not putting edge. Source is null</message>
+</record>
+<record>
+  <date>2012-10-01T11:37:29</date>
+  <millis>1349109449122</millis>
+  <sequence>32</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>42</thread>
+  <message>Not putting edge. End vertices are equal</message>
+</record>
+</log>

@@ -1,0 +1,38 @@
+add storage Neo4j /home/cshou/SPADE/database
+add reporter LinuxFUSE /home/cshou/SPADE/mountPoint
+list reporters
+list storages
+add storage Neo4j /home/cshou/SPADE/database1
+list storages
+add reporter LinuxFUSE /home/cshou/SPADE/mountPoint1
+list storages
+exit
+list storages
+add storage Neo4j /home/cshou/SPADE/database
+list storages
+add reporter LinuxFUSE /home/cshou/SPADE/mountPoint
+list reporters
+exit
+add storage Neo4j /home/cshou/DataSys/PAFS/SPADE/database
+list storages
+add reporter FusionFUSE
+exit
+list storages
+add reporter FusionFUSE
+exit
+list reporters
+exit
+list storages
+remove storage Neo4j
+add storage Neo4j /home/cshou/DataSys/PAFS/SPADE/database4fs
+list reporters
+remove reporter FusionFUSE
+list reporters
+exit
+list reporters
+exit
+list storages
+list reporters
+add reporter FusionFUSE
+add reporter FusionFUSE ~/test
+exit
