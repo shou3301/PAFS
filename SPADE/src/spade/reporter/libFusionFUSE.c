@@ -160,6 +160,19 @@ static int spade_receivefile(const char *remote_path, const char *remote_ip, con
     return 0;
 }
 
+static int spade_snedfile(const char *source_path, const char *dist_path, const char *dist_ip) {
+
+    (*jvm)->AttachCurrentThread(jvm, (void**) &env, NULL);
+
+    jstring j_source_path = (*env)->NewStringUTF(env, source_path);
+    jstring j_dist_ip = (*env)->NewStringUTF(env, dist_ip);
+    jstring j_dist_path = (*env)->NewStringUTF(env, dist_path);
+
+    (*env)->CallVoidMethod(env, reporterInstance, sendfileMethod, j_source_path, j_dist_path, j_dist_ip);
+
+    return 0;
+}
+
 static int spade_create(const char *path, pid_t pid) {
 
     (*jvm)->AttachCurrentThread(jvm, (void**) &env, NULL);
@@ -617,6 +630,53 @@ int bridge_receivefile(int sock) {
     return 1;
 }
 
+int bridge_sendfile(int sock) {
+    int new_server_socket = sock;
+    char buffer[BUFFER_SIZE];
+    int length;
+
+    char *dist_path = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *source_path = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *dist_ip = (char *) malloc(BUFFER_SIZE * sizeof(char));
+
+    // Read path
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- write path -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(source_path, buffer);
+    }
+
+    // Read ip
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- write path -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(dist_path, buffer);
+    }
+
+    // Read path
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- write path -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(dist_ip, buffer);
+    }
+
+    spade_receivefile(source_path, dist_path, dist_ip);
+
+    return 1;
+}
+
 int bridge_create(int sock) {
     int new_server_socket = sock;
     char buffer[BUFFER_SIZE];
@@ -710,6 +770,9 @@ void* dispatch(void* para) {
     } else if (strcmp(buffer, "create") == 0) {
         
         bridge_create(new_server_socket);
+    } else if (strcmp(buffer, "sendfile") == 0) {
+
+        bridge_sendfile(new_server_socket);
     }
 
     close(new_server_socket);
@@ -796,6 +859,7 @@ JNIEXPORT jint JNICALL Java_spade_reporter_FusionFUSE_launchFUSEServer (JNIEnv *
     unlinkMethod = (*env)->GetMethodID(env, FUSEReporterClass, "unlink", "(ILjava/lang/String;)V");
     receivefileMethod = (*env)->GetMethodID(env, FUSEReporterClass, "receivefile", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
     createMethod = (*env)->GetMethodID(env, FUSEReporterClass, "create", "(ILjava/lang/String;)V");
+    sendfileMethod = (*env)->GetMethodID(env, FUSEReporterClass, "sendfile", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
 
     launch_Service();
 

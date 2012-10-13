@@ -23,5 +23,6 @@ int spade_read(const char*, pid_t, int, int);
 int spade_write(const char*, pid_t, int, int);
 int spade_receivefile(const char*, const char*, const char*);
 int spade_create(const char*, pid_t);
+int spade_sendfile(const char*, const char*, const char*);
 
 #endif

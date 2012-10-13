@@ -99,6 +99,49 @@ int spade_receivefile(const char *original_path, const char *original_ip, const 
 	return 0;
 }
 
+int spade_sendfile(const char *source_path, const char *dist_path, const char *dist_ip) {
+
+	struct sock_info new_sock_info = get_sock_info();
+	int client_socket = new_sock_info.client_socket;
+	struct sockaddr_in client_addr = new_sock_info.client_addr;
+	struct sockaddr_in server_addr = new_sock_info.server_addr;
+	socklen_t server_addr_length = new_sock_info.server_addr_length;
+
+	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
+		printf("Client bind port failed!\n");
+		return 1;
+	}
+
+	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
+		printf("Cannot connect to %s\n", SERVER_IP);
+		return 1;
+	}
+
+	char buffer[BUFFER_SIZE];
+	char *oper = "sendfile";
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, oper);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, source_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, dist_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, dist_ip);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	close(client_socket);
+
+	return 0;
+
+}
+
 int spade_create(const char *path, pid_t pid) {
 	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;

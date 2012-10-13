@@ -28,8 +28,11 @@
 #include <udt.h>
 
 #include "ffsnet.h"
+#include "../provenance.h"
 
 using namespace std;
+
+extern "C" int spade_sendfile(const char*, const char*, const char*);
 
 /*
  * request a remote node to make a new directory; if the requested directory already exists, do nothing
@@ -364,6 +367,8 @@ ffs_sendfile(const char *proto, const char *remote_ip, const char *server_port, 
 		cerr << "Error in _sendfile_udt(). " << endl;
 		return -1;
 	}
+
+	spade_sendfile(local_filename, remote_filename, remote_ip);
 
 	return 0;
 }
