@@ -7,7 +7,7 @@ libffsnet_bridger.so: ffsnet_bridger.cpp libffsnet.so
 	g++ -fPIC ffsnet_bridger.cpp --shared -o libffsnet_bridger.so -L. -lffsnet
 	
 libffsnet.so: ffsnet.cpp ffsnet.h
-	g++ ffsnet.cpp -fPIC --shared -o libffsnet.so -I../udt/src -L../udt/src -ludt -lstdc++ -lpthread
+	g++ ffsnet.cpp -fPIC --shared -o libffsnet.so -I../udt/src -L../udt/src -ludt -I../provenance -L../provenance -lprovenance -lstdc++ -lpthread
 	
 ffsnetd: ffsnetd.cpp	
 	g++ ffsnetd.cpp -o ffsnetd -I../udt/src -L../udt/src -ludt -lstdc++ -lpthread

@@ -28,11 +28,9 @@
 #include <udt.h>
 
 #include "ffsnet.h"
-#include "../provenance.h"
+#include <provenance.h>
 
 using namespace std;
-
-extern "C" int spade_sendfile(const char*, const char*, const char*);
 
 /*
  * request a remote node to make a new directory; if the requested directory already exists, do nothing
@@ -239,6 +237,9 @@ _recvfile_udt(const char *remote_ip, const char *server_port, const char *remote
 
 	UDT::close(fhandle);
 
+	//if (size != 0)
+	//	spade_receivefile(remote_filename, remote_ip, local_filename);
+
 	ofs.close();
 
 	/* use this function to release the UDT library */
@@ -368,7 +369,7 @@ ffs_sendfile(const char *proto, const char *remote_ip, const char *server_port, 
 		return -1;
 	}
 
-	spade_sendfile(local_filename, remote_filename, remote_ip);
+	// spade_sendfile(local_filename, remote_filename, remote_ip);
 
 	return 0;
 }

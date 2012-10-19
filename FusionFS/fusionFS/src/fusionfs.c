@@ -704,6 +704,9 @@ int fusion_read(const char *path, char *buf, size_t size, off_t offset,
 	// no need to get fpath on this one, since I work from fi->fh not the path
 	log_fi(fi);
 
+	char fpath[PATH_MAX] = {0};
+	fusion_fullpath(fpath, path);
+
 	struct timeval starttime, endtime;
     long seconds, useconds, mtime;
     gettimeofday(&starttime, NULL);
@@ -718,7 +721,7 @@ int fusion_read(const char *path, char *buf, size_t size, off_t offset,
     mtime = (seconds * 1000000 + useconds);
     int iotime = mtime;
 
-    spade_read(path, fuse_get_context()->pid, iotime, 0);
+    spade_read(fpath, fuse_get_context()->pid, iotime, 0);
 
     log_msg("\n cshou debug: returned from spade_read.\n\n");
 
@@ -750,6 +753,9 @@ int fusion_write(const char *path, const char *buf, size_t size, off_t offset,
 	// no need to get fpath on this one, since I work from fi->fh not the path
 	log_fi(fi);
 
+	char fpath[PATH_MAX] = {0};
+	fusion_fullpath(fpath, path);
+
 	struct timeval starttime, endtime;
     long seconds, useconds, mtime;
     gettimeofday(&starttime, NULL);
@@ -764,7 +770,7 @@ int fusion_write(const char *path, const char *buf, size_t size, off_t offset,
     mtime = (seconds * 1000000 + useconds);
     int iotime = mtime;
 
-    spade_write(path, fuse_get_context()->pid, iotime, 0);
+    spade_write(fpath, fuse_get_context()->pid, iotime, 0);
 
     log_msg("\n cshou debug: returned from spade_write.\n\n");
 

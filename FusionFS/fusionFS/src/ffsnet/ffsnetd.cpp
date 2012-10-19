@@ -29,10 +29,17 @@
 #include <linux/limits.h>
 #include <sys/stat.h>
 #include <cerrno>
+#include "provenance.h"
 
 using namespace std;
 
 void* transfile(void*);
+
+struct transinfo
+{
+	UDTSOCKET* fhandle;
+	char* hostaddr;
+};
 
 int main(int argc, char* argv[])
 {
@@ -90,9 +97,15 @@ int main(int argc, char* argv[])
 		char clientservice[NI_MAXSERV];
 		getnameinfo((sockaddr *)&clientaddr, addrlen, clienthost, sizeof(clienthost), clientservice, sizeof(clientservice), NI_NUMERICHOST|NI_NUMERICSERV);
 		/* cout << "new connection: " << clienthost << ":" << clientservice << endl; */
+
+		/* added by cshou (a big destruction!!!) */
+		struct transinfo tinfo;
+		tinfo.fhandle = new UDTSOCKET(fhandle);
+		tinfo.hostaddr = clienthost;
 		
 		pthread_t filethread;
-		pthread_create(&filethread, NULL, transfile, new UDTSOCKET(fhandle));
+		// pthread_create(&filethread, NULL, transfile, new UDTSOCKET(fhandle));
+		pthread_create(&filethread, NULL, transfile, (void*)&tinfo);
 		pthread_detach(filethread);
 	}
 
@@ -107,10 +120,12 @@ int main(int argc, char* argv[])
 /**
  * Thread to accept file request: download or upload
  */
-void* transfile(void* usocket)
+void* transfile(/*void* usocket*/ void* ti)
 {
-	UDTSOCKET fhandle = *(UDTSOCKET*)usocket;
-	delete (UDTSOCKET*)usocket;
+	// UDTSOCKET fhandle = *(UDTSOCKET*)usocket;
+	struct transinfo *tinfo = (struct transinfo *)ti;
+	UDTSOCKET fhandle = *(tinfo->fhandle);
+	char *hostaddr = tinfo->hostaddr;
 
 	/* aquiring file name information from client */
 	char file[1024];
@@ -215,6 +230,7 @@ void* transfile(void* usocket)
 		int64_t size = ifs.tellg();
 		ifs.seekg(0, ios::beg);
 
+
 		/* send file size information */
 		if (UDT::ERROR == UDT::send(fhandle, (char*)&size, sizeof(int64_t), 0))	{
 
@@ -240,6 +256,9 @@ void* transfile(void* usocket)
 			cout << "sendfile: " << UDT::getlasterror().getErrorMessage() << endl;
 			return 0;
 		}
+
+		//if (size != 0)
+			spade_sendfile(file, file, hostaddr);
 
 		UDT::perfmon(fhandle, &trace);
 		/* cout << "speed = " << trace.mbpsSendRate << "Mbits/sec" << endl; */

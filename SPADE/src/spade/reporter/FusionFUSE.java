@@ -34,7 +34,6 @@ import spade.core.AbstractVertex;
 import spade.edge.opm.*;
 import spade.vertex.custom.File;
 import spade.vertex.custom.Network;
-import spade.vertex.custom.NetworkProc;
 import spade.vertex.custom.Program;
 import spade.vertex.opm.Agent;
 
@@ -516,25 +515,37 @@ public class FusionFUSE extends AbstractReporter {
     	// cshou debug 
     	fsLogger.info("Enter RECEIVE FILE ================================");
     	
-    	NetworkProc netProc = new NetworkProc();
-    	netProc.addAnnotation("source host", remoteIP);
-    	netProc.addAnnotation("destination host", localHostAddress);
-    	netProc.addAnnotation("source path", remotePath);
-    	netProc.addAnnotation("destination path", localPath);
-    	putVertex(netProc);
-    	
-    	fsLogger.info("Putting net process: " + netProc);
-    	
-    	File fileVertex = createFileVertex(localPath);
+    	File fileVertex = new File();
+    	java.io.File file = new java.io.File(localPath);
+    	fileVertex.addAnnotation("original hostaddress", remoteIP);
+    	fileVertex.addAnnotation("current hostaddress", localHostAddress);
+    	fileVertex.addAnnotation("filename", file.getName());
+    	fileVertex.addAnnotation("path", localPath);
+    	fileVertex.addAnnotation("istemp", "true");
     	putVertex(fileVertex);
+    	fsLogger.info("Putting File vertex: " + fileVertex);
     	
-    	fsLogger.info("Putting file vertex:" + fileVertex);
+    	Program prog = new Program();
+    	prog.addAnnotation("pidname", "FusionFS");
+    	prog.addAnnotation("hostname", localHostName);
+    	prog.addAnnotation("hostaddress", localHostAddress);
+    	putVertex(prog);
+    	fsLogger.info("Putting Program vertex: " + prog);
     	
-    	WasGeneratedBy generatedEdge = new WasGeneratedBy(fileVertex, netProc);
+    	Network network = new Network();
+    	network.addAnnotation("source host", localHostAddress);
+    	network.addAnnotation("source port", "9000");
+    	network.addAnnotation("destination host", remoteIP);
+    	network.addAnnotation("destination port", "9000");
+    	putVertex(network);
+    	fsLogger.info("Putting Network vertex: " + network);
     	
-    	putEdge(generatedEdge);
-    	
-    	fsLogger.info("Putting generated edge: " + generatedEdge);
+    	Used usedEdge = new Used(prog, network);
+    	WasGeneratedBy wasGeneratedByEdge = new WasGeneratedBy(fileVertex, prog);
+    	putEdge(usedEdge);
+    	putEdge(wasGeneratedByEdge);
+    	fsLogger.info("Putting Used edge: " + usedEdge);
+    	fsLogger.info("Putting Used edge: " + wasGeneratedByEdge);
     }
     
     public void sendfile(String sourcePath, String distPath, String distIP) {
@@ -544,29 +555,37 @@ public class FusionFUSE extends AbstractReporter {
     	
     	File fileVertex = createFileVertex(sourcePath);
     	putVertex(fileVertex);
+    	fsLogger.info("Putting file vertex: " + fileVertex);
     	
-    	fsLogger.info("Putting file vertex:" + fileVertex);
+    	Program prog = new Program();
+    	prog.addAnnotation("pidname", "FusionFS");
+    	prog.addAnnotation("hostname", localHostName);
+    	prog.addAnnotation("hostaddress", localHostAddress);
+    	putVertex(prog);
+    	fsLogger.info("Putting Program vertex: " + prog);
     	
-    	NetworkProc netProc = new NetworkProc();
-    	netProc.addAnnotation("source host", localHostAddress);
-    	netProc.addAnnotation("destination host", distIP);
-    	netProc.addAnnotation("source path", sourcePath);
-    	netProc.addAnnotation("destination path", distPath);
-    	putVertex(netProc);
+    	Network network = new Network();
+    	network.addAnnotation("source host", localHostAddress);
+    	network.addAnnotation("source port", "9000");
+    	network.addAnnotation("destination host", distIP);
+    	network.addAnnotation("destination port", "9000");
+    	putVertex(network);
+    	fsLogger.info("Putting Network vertex: " + network);
     	
-    	fsLogger.info("Putting net process: " + netProc);
-    	
-    	Used edge = new Used(netProc, fileVertex);
-    	putEdge(edge);
-    	
-    	fsLogger.info("Putting generated edge: " + edge);
+    	Used usedEdge = new Used(prog, fileVertex);
+    	WasGeneratedBy wasGeneratedByEdge = new WasGeneratedBy(network, prog);
+    	putEdge(usedEdge);
+    	putEdge(wasGeneratedByEdge);
+    	fsLogger.info("Putting Used edge: " + usedEdge);
+    	fsLogger.info("Putting Used edge: " + wasGeneratedByEdge);
+
     }
     
     /**
      * @param path The path to the created file
      * @param pid The PID of the creating process
      */
-    public void create(String path, int pid) {
+    public void create(int pid, String path) {
     	
     	// cshou debug 
     	fsLogger.info("Enter CREATE ================================");
@@ -618,9 +637,9 @@ public class FusionFUSE extends AbstractReporter {
     private String sanitizePath(String path) {
         // Sanitize path to avoid recursion inside FUSE which can cause the
         // reporter to crash.
-        if (path.startsWith(mountPath)) {
+        /*if (path.startsWith(mountPath)) {
             path = path.substring(mountPath.length());
-        }
+        }*/
         return path;
     }
 

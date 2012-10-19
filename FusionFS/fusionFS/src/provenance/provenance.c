@@ -14,6 +14,7 @@
 #define BUFFER_SIZE 1024
 #define SERVER_IP "127.0.0.1"
 
+// provide socket connection info
 struct sock_info get_sock_info() {
 
 	struct sock_info new_sock_info;
@@ -29,7 +30,7 @@ struct sock_info get_sock_info() {
 	int client_socket = socket(AF_INET, SOCK_STREAM, 0);
 	if (client_socket < 0) {
 		printf("Create socket failed!\n");
-		exit(1);
+		return;
 	}
 
 	new_sock_info.client_socket = client_socket;
@@ -40,7 +41,7 @@ struct sock_info get_sock_info() {
 	server_addr.sin_family = AF_INET;
 	if (inet_aton(SERVER_IP, &server_addr.sin_addr) == 0) {
 		printf("Server address error!\n");
-		exit(1);
+		return;
 	}
 
 	new_sock_info.server_addr = server_addr;
@@ -56,6 +57,129 @@ void printLog(struct sock_info new_sock_info) {
 	printf("Client Sock -- %d \n", new_sock_info.client_socket);
 }
 
+int spade_receivefile(const char *original_path, const char *original_ip, const char *local_path) {
+
+	struct sock_info new_sock_info = get_sock_info();
+	int client_socket = new_sock_info.client_socket;
+	struct sockaddr_in client_addr = new_sock_info.client_addr;
+	struct sockaddr_in server_addr = new_sock_info.server_addr;
+	socklen_t server_addr_length = new_sock_info.server_addr_length;
+
+	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
+		printf("Client bind port failed!\n");
+		return 1;
+	}
+
+	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
+		printf("Cannot connect to %s\n", SERVER_IP);
+		return 1;
+	}
+
+	char buffer[BUFFER_SIZE];
+	char *oper = "receivefile";
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, oper);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, original_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, original_ip);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, local_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	close(client_socket);
+
+	return 0;
+}
+
+int spade_sendfile(const char *source_path, const char *dist_path, const char *dist_ip) {
+
+	struct sock_info new_sock_info = get_sock_info();
+	int client_socket = new_sock_info.client_socket;
+	struct sockaddr_in client_addr = new_sock_info.client_addr;
+	struct sockaddr_in server_addr = new_sock_info.server_addr;
+	socklen_t server_addr_length = new_sock_info.server_addr_length;
+
+	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
+		printf("Client bind port failed!\n");
+		return 1;
+	}
+
+	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
+		printf("Cannot connect to %s\n", SERVER_IP);
+		return 1;
+	}
+
+	char buffer[BUFFER_SIZE];
+	char *oper = "sendfile";
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, oper);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, source_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, dist_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, dist_ip);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	close(client_socket);
+
+	return 0;
+
+}
+
+int spade_create(const char *path, pid_t pid) {
+	struct sock_info new_sock_info = get_sock_info();
+	int client_socket = new_sock_info.client_socket;
+	struct sockaddr_in client_addr = new_sock_info.client_addr;
+	struct sockaddr_in server_addr = new_sock_info.server_addr;
+	socklen_t server_addr_length = new_sock_info.server_addr_length;
+
+	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
+		printf("Client bind port failed!\n");
+		return 1;
+	}
+
+	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
+		printf("Cannot connect to %s\n", SERVER_IP);
+		return 1;
+	}
+
+	char buffer[BUFFER_SIZE];
+	char *oper = "create";
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, oper);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	int i_pid = (int) pid;
+	sprintf(buffer, "%d", i_pid);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	close(client_socket);
+
+	return 0;
+}
+
 int spade_readlink(const char *path, pid_t pid, int iotime) {
 
 	struct sock_info new_sock_info = get_sock_info();
@@ -68,12 +192,12 @@ int spade_readlink(const char *path, pid_t pid, int iotime) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -97,6 +221,8 @@ int spade_readlink(const char *path, pid_t pid, int iotime) {
 	send(client_socket, buffer, BUFFER_SIZE, 0);
 
 	close(client_socket);
+
+	return 0;
 }
 
 int spade_unlink(const char *path, pid_t pid) {
@@ -111,12 +237,12 @@ int spade_unlink(const char *path, pid_t pid) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -136,6 +262,8 @@ int spade_unlink(const char *path, pid_t pid) {
 	send(client_socket, buffer, BUFFER_SIZE, 0);
 
 	close(client_socket);
+
+	return 0;
 }
 
 int spade_symlink(const char *from, const char *to, pid_t pid) {
@@ -150,12 +278,12 @@ int spade_symlink(const char *from, const char *to, pid_t pid) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -180,6 +308,8 @@ int spade_symlink(const char *from, const char *to, pid_t pid) {
 
 	close(client_socket);
 
+	return 0;
+
 }
 
 int spade_rename(const char *from, const char *to, pid_t pid, int link, int iotime) {
@@ -194,12 +324,12 @@ int spade_rename(const char *from, const char *to, pid_t pid, int link, int ioti
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -232,6 +362,7 @@ int spade_rename(const char *from, const char *to, pid_t pid, int link, int ioti
 
 	close(client_socket);
 
+	return 0;
 }
 
 int spade_link(const char *from, const char *to, pid_t pid) {
@@ -246,12 +377,12 @@ int spade_link(const char *from, const char *to, pid_t pid) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -280,6 +411,7 @@ int spade_link(const char *from, const char *to, pid_t pid) {
 
 	close(client_socket);
 
+	return 0;
 }
 
 int spade_read(const char *path, pid_t pid, int iotime, int link) {
@@ -294,12 +426,12 @@ int spade_read(const char *path, pid_t pid, int iotime, int link) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -332,6 +464,7 @@ int spade_read(const char *path, pid_t pid, int iotime, int link) {
 
 	close(client_socket);
 
+	return 0;
 }
 
 int spade_write(const char *path, pid_t pid, int iotime, int link) {
@@ -346,12 +479,12 @@ int spade_write(const char *path, pid_t pid, int iotime, int link) {
 
 	if(bind(client_socket, (struct sockaddr*)&client_addr, sizeof(client_addr))) {
 		printf("Client bind port failed!\n");
-		exit(1);
+		return 1;
 	}
 
 	if (connect(client_socket, (struct sockaddr*)&server_addr, server_addr_length) < 0) {
 		printf("Cannot connect to %s\n", SERVER_IP);
-		exit(1);
+		return 1;
 	}
 
 	char buffer[BUFFER_SIZE];
@@ -380,6 +513,7 @@ int spade_write(const char *path, pid_t pid, int iotime, int link) {
 
 	close(client_socket);
 
+	return 0;
 }
 
 // main(int argc, char *argv) {
