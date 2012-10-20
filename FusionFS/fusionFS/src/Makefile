@@ -1,11 +1,11 @@
-fusionfs : fusionfs.o util.o log.o provenance.o
-	gcc -g -o fusionfs fusionfs.o util.o log.o -L./ffsnet -lffsnet_bridger -L./zht/lib -lzht -L./provenance -lprovenance -lstdc++ -lprotobuf -lprotobuf-c -lpthread `pkg-config fuse --libs`
+fusionfs : fusionfs.o util.o log.o
+	gcc -g -o fusionfs fusionfs.o util.o log.o -L/mnt/common/cshou/usr/lib -L./ffsnet -lffsnet_bridger -L./zht/lib -lzht -I./provenance -L./provenance -lprovenance  -lstdc++ -lprotobuf -lprotobuf-c -lpthread -I/mnt/common/cshou/usr/include `pkg-config fuse --libs`
 
-fusionfs.o : fusionfs.c log.h params.h util.h provenance.h
-	gcc -g -Wall -c fusionfs.c -L./ffsnet -lffsnet_bridger -L./provenance -lprovenance -lpthread `pkg-config fuse --cflags`
+fusionfs.o : fusionfs.c log.h params.h util.h
+	gcc -g -Wall -c fusionfs.c -L/mnt/common/cshou/usr/lib -L./ffsnet -lffsnet_bridger -I./provenance -L./provenance -lprovenance -lpthread -I/mnt/common/cshou/usr/include `pkg-config fuse --cflags`
 	
 util.o : util.c log.h params.h
-	gcc -g -Wall -c util.c -L./zht/lib -lzht -lstdc++ -lprotobuf -lprotobuf-c -lpthread	`pkg-config fuse --cflags` 
+	gcc -g -Wall -c util.c -L./zht/lib -lzht -lstdc++ -lprotobuf -lprotobuf-c -lpthread -I/mnt/common/cshou/usr/include `pkg-config fuse --cflags` 
 
 log.o : log.c log.h params.h
 	gcc -g -Wall -c log.c `pkg-config fuse --cflags`

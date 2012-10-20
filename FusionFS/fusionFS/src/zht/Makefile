@@ -5,11 +5,11 @@
 CXX=g++
 CC=gcc
 CPPFLAGS=-Xlinker -zmuldefs
-CFLAGS=-Llib -L/usr/local/lib -Iinc
+CFLAGS=-Llib -L/mnt/common/cshou/usr/lib -Iinc -I/mnt/common/cshou/usr/include
 LFLAGS=-lzht
 LFLAGS+=-lstdc++ -lrt -lpthread -lm -lc -lprotobuf -lprotobuf-c
 
-PROTOBUF_HOME=/usr/local/include/google/protobuf #your Google Protobuf location here :) (Default is:/usr/local/include/google/protobuf) Additional NOTE: This may be useless if you added PROTOBUF to your LD_LIBRARY_PATH
+PROTOBUF_HOME=/mnt/common/cshou/usr/include/google/protobuf #your Google Protobuf location here :) (Default is:/usr/local/include/google/protobuf) Additional NOTE: This may be useless if you added PROTOBUF to your LD_LIBRARY_PATH
 
 #SOURCES=$(wildcard src/common/*.cpp)
 #OBJECTS=$(SOURCES:.cpp=.o)

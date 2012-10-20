@@ -313,7 +313,7 @@ public class FusionFUSE extends AbstractReporter {
      * @param link An integer used to indicate whether the target was a link or
      * not.
      */
-    public void read(int pid, int iotime, String path, int link) {
+    public void read(int pid, int iotime, String path, int link, String size, String mtime) {
     	
     	// cshou debug 
     	fsLogger.info("Enter READ ================================");
@@ -325,7 +325,18 @@ public class FusionFUSE extends AbstractReporter {
         // Create file artifact depending on whether this is a link or not.
         // Link artifacts are created differently to avoid recursion that may
         // cause FUSE to crash.
+
         File fileVertex = (link == 1) ? createLinkVertex(path) : createFileVertex(path);
+        if (fileVertex == null) {
+            fileVertex = new File();
+            java.io.File file = new java.io.File(path);
+            fileVertex.addAnnotation("filename", file.getName());
+            fileVertex.addAnnotation("path", path);
+            fileVertex.addAnnotation("size", size);
+            fileVertex.addAnnotation("lastmodified", mtime);
+            fileVertex.addAnnotation("current hostaddress", localHostAddress);
+            fileVertex.addAnnotation("temp", "true");
+        }
         putVertex(fileVertex);
         
         // cshou debug
@@ -342,7 +353,7 @@ public class FusionFUSE extends AbstractReporter {
         // If the given path represents a link, then perform the same operation on the
         // artifact to which the link points.
         if (link == 1 && links.containsKey(path)) {
-            read(pid, iotime, links.get(path), 0);
+            read(pid, iotime, links.get(path), 0, size, mtime);
         }
     }
 
@@ -409,7 +420,7 @@ public class FusionFUSE extends AbstractReporter {
         // If the given path represents a link, then perform the same operation on the
         // artifact to which the link points.
         if (links.containsKey(path)) {
-            read(pid, iotime, links.get(path), 0);
+            read(pid, iotime, links.get(path), 0, "0", "0");
         }
     }
 
@@ -510,18 +521,19 @@ public class FusionFUSE extends AbstractReporter {
      * @param remoteIP remote IP address
      * @param localPath local path of the file, however in current design, it's same with remote path
      */
-    public void receivefile(String remotePath, String remoteIP, String localPath) {
+    public void receivefile(String remotePath, String remoteIP, String localPath, String size, String mtime) {
     	
     	// cshou debug 
     	fsLogger.info("Enter RECEIVE FILE ================================");
     	
     	File fileVertex = new File();
     	java.io.File file = new java.io.File(localPath);
-    	fileVertex.addAnnotation("original hostaddress", remoteIP);
     	fileVertex.addAnnotation("current hostaddress", localHostAddress);
     	fileVertex.addAnnotation("filename", file.getName());
     	fileVertex.addAnnotation("path", localPath);
-    	fileVertex.addAnnotation("istemp", "true");
+        fileVertex.addAnnotation("size", size);
+        fileVertex.addAnnotation("lastmodified", mtime);
+    	fileVertex.addAnnotation("temp", "true");
     	putVertex(fileVertex);
     	fsLogger.info("Putting File vertex: " + fileVertex);
     	
@@ -615,6 +627,10 @@ public class FusionFUSE extends AbstractReporter {
     private File createFileVertex(String path) {
         File fileVertex = new File();
         java.io.File file = new java.io.File(path);
+
+        if (!file.exists())
+            return null;
+
         fileVertex.addAnnotation("hostaddress", localHostAddress);
         fileVertex.addAnnotation("filename", file.getName());
         fileVertex.addAnnotation("path", path);

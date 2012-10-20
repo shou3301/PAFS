@@ -23,9 +23,9 @@ int spade_unlink(const char*, pid_t);
 int spade_symlink(const char*, const char*, pid_t);
 int spade_rename(const char*, const char*, pid_t, int, int);
 int spade_link(const char*, const char*, pid_t);
-int spade_read(const char*, pid_t, int, int);
+int spade_read(const char*, pid_t, int, int, const char*, const char*);
 int spade_write(const char*, pid_t, int, int);
-int spade_receivefile(const char*, const char*, const char*);
+int spade_receivefile(const char*, const char*, const char*, const char*, const char*);
 int spade_create(const char*, pid_t);
 int spade_sendfile(const char*, const char*, const char*);
 

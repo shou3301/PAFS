@@ -1,1151 +1,390 @@
 
 fusion_init()
 
-fusion_getattr(path="/.Trash", statbuf=0x99761bb0)
+fusion_getattr(path="/", statbuf=0x2bf8adc0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/.Trash", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.Trash"
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
 
+ ===========DFZ debug: _getattr() zht_lookup() =  . 
 
- ===========DFZ debug: _getattr() zht_lookup() = . 
 
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694000e50
-    lock_owner = 0x0000000000000000
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/ exists in local. 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.Trash transferred from . 
-
-    ERROR fusion_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-fusion_getattr(path="/.xdg-volume-info", statbuf=0x98f60bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/.xdg-volume-info", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.xdg-volume-info"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() = . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.xdg-volume-info transferred from . 
-
-    ERROR fusion_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-fusion_getattr(path="/autorun.inf", statbuf=0x99f62bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/autorun.inf", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/autorun.inf"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() = . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/autorun.inf transferred from . 
-
-    ERROR fusion_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-fusion_readdir(path="/", buf=0x94000cc0, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694000e50
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694000e50
-    lock_owner = 0x0000000000000000
-
-fusion_getattr(path="/.Trash-1000", statbuf=0x99f62bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/.Trash-1000", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.Trash-1000"
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f5694000e50
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694000e50
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() = . 
-
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001320
-    lock_owner = 0x0000000000000000
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/.Trash-1000 transferred from . 
-
-    ERROR fusion_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-fusion_readdir(path="/", buf=0x88000a20, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5688001320
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001320
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f5688001320
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001320
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001290
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x88001210, filler=0x9b297f50, offset=0, fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5688001290
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001290
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f5688001290
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5688001290
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99f62c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x94000d40, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99f62c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003d70
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x8c000990, filler=0x9b297f50, offset=0, fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f568c003d70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003d70
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x98f60c00)
-    flags = 0x00000000
-    fh_old = 0x7f568c003d70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003d70
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x94000d40, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x88001210, filler=0x9b297f50, offset=0, fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x94000d40, filler=0x9b297f50, offset=0, fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x98f60c00)
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x8c000990, filler=0x9b297f50, offset=0, fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x88001210, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99f62c00)
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99f62c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x94000d40, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x98f60c00)
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x8c000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x94000d40, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x98f60c00)
-    flags = 0x00000000
-    fh_old = 0x7f5694009480
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5694009480
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x80000990, filler=0x9b297f50, offset=0, fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99761c00)
-    flags = 0x00000000
-    fh_old = 0x7f5680000b20
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f5680000b20
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x88001210, filler=0x9b297f50, offset=0, fi=0x933debf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x99f62c00)
-    flags = 0x00000000
-    fh_old = 0x7f56880013a0
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f56880013a0
-    lock_owner = 0x0000000000000000
-
-fusion_opendir(path="/", fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_readdir(path="/", buf=0x8c000990, filler=0x9b297f50, offset=0, fi=0x98f60bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========DFZ debug: fusion_readdir() filelist =  . 
-
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_releasedir(path="/", fi=0x933dec00)
-    flags = 0x00000000
-    fh_old = 0x7f568c003a70
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00007f568c003a70
-    lock_owner = 0x0000000000000000
-
-fusion_getattr(path="/autorun.inf", statbuf=0x99f62bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/autorun.inf", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/autorun.inf"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() = . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/autorun.inf transferred from . 
-
-    ERROR fusion_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-fusion_getattr(path="/", statbuf=0x99761b80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
-
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
+    st_dev = 64517
+    st_ino = 7402770
+    st_mode = 040755
     st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f153
-    st_ctime = 0x5069f153
+    st_atime = 0x5080dbc4
+    st_mtime = 0x5081d19b
+    st_ctime = 0x5081d19b
 
-fusion_getattr(path="/", statbuf=0x98f60b80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_getattr(path="/", statbuf=0x2c78bdc0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
+ ===========DFZ debug: _getattr() zht_lookup() =  . 
 
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
+
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/ exists in local. 
+
+    st_dev = 64517
+    st_ino = 7402770
+    st_mode = 040755
     st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f153
-    st_ctime = 0x5069f153
-
-fusion_getattr(path="/", statbuf=0x933deb80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
-
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f153
-    st_ctime = 0x5069f153
+    st_atime = 0x5080dbc4
+    st_mtime = 0x5081d19b
+    st_ctime = 0x5081d19b
 
 fusion_access(path="/", mask=01)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_getattr(path="/", statbuf=0x2c78bdc0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
-fusion_getattr(path="/", statbuf=0x98f60b80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
+ ===========DFZ debug: _getattr() zht_lookup() =  final . 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/ exists in local. 
 
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
+    st_dev = 64517
+    st_ino = 7402770
+    st_mode = 040755
     st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f153
-    st_ctime = 0x5069f153
+    st_atime = 0x5080dbc4
+    st_mtime = 0x5081d19b
+    st_ctime = 0x5081d19b
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
-fusion_opendir(path="/", fi=0x99f62bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_opendir(path="/", fi=0x2bf8ae30)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
     flags = 0x00098800
     fh_old = 0x00000000
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x00007f5694009480
+    fh = 0x0000000000c22a00
     lock_owner = 0x0000000000000000
 
-fusion_readdir(path="/", buf=0x94000c30, filler=0x9b297f50, offset=0, fi=0x99761bf0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_readdir(path="/", buf=0x00bfa9f0, filler=0x2da14fc0, offset=0, fi=0x2c78be30)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
- ===========DFZ debug: fusion_readdir() filelist =  love . 
+ ===========DFZ debug: fusion_readdir() filelist =  final . 
 
-calling filler with name love
+calling filler with name final
     flags = 0x00000000
-    fh_old = 0x7f5694009480
+    fh_old = 0x00c22a00
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x00007f5694009480
+    fh = 0x0000000000c22a00
     lock_owner = 0x0000000000000000
 
-fusion_getattr(path="/love", statbuf=0x98f60bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/love", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love"
+fusion_getattr(path="/final", statbuf=0x2bf8adf0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
 
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() = 216.47.142.248. 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love transferred from 216.47.142.248. 
+ ===========DFZ debug: _getattr() zht_lookup() = 192.168.1.22. 
 
-    st_dev = 2049
-    st_ino = 16778662
-    st_mode = 0100664
+
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/final transferred from 192.168.1.22. 
+
+    st_dev = 64517
+    st_ino = 7403238
+    st_mode = 0100644
     st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
-    st_size = 13
+    st_size = 14
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f40e
-    st_mtime = 0x5069f40e
-    st_ctime = 0x5069f40e
+    st_atime = 0x5081e22b
+    st_mtime = 0x5081e22b
+    st_ctime = 0x5081e22b
 
-fusion_releasedir(path="/", fi=0x99f62c00)
+fusion_releasedir(path="/", fi=0x2bf8ae30)
     flags = 0x00000000
-    fh_old = 0x7f5694009480
+    fh_old = 0x00c22a00
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x00007f5694009480
+    fh = 0x0000000000c22a00
     lock_owner = 0x0000000000000000
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_getattr(path="/", statbuf=0x2c78bdc0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
 
-fusion_getattr(path="/", statbuf=0x98f60b80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
+ ===========DFZ debug: _getattr() zht_lookup() =  final . 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/ exists in local. 
 
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
+    st_dev = 64517
+    st_ino = 7402770
+    st_mode = 040755
     st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f40e
-    st_ctime = 0x5069f40e
+    st_atime = 0x5080dbc4
+    st_mtime = 0x5081e22b
+    st_ctime = 0x5081e22b
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_getattr(path="/final", statbuf=0x2bf8adf0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
 
-fusion_getattr(path="/love", statbuf=0x99f62bb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/love", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() zht_lookup() = 216.47.142.248. 
+ ===========DFZ debug: _getattr() zht_lookup() = 192.168.1.22. 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love transferred from 216.47.142.248 because local copy might be outdated. 
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/final transferred from 192.168.1.22 because local copy might be outdated. 
 
-    st_dev = 2049
-    st_ino = 16778662
-    st_mode = 0100664
+    st_dev = 64517
+    st_ino = 7403238
+    st_mode = 0100644
     st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
-    st_size = 13
+    st_size = 14
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f40e
-    st_mtime = 0x5069f447
-    st_ctime = 0x5069f447
+    st_atime = 0x5081e22b
+    st_mtime = 0x5081e24f
+    st_ctime = 0x5081e24f
 
-fusion_open(path"/love", fi=0x99761cb0)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/love", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love"
+fusion_open(path"/final", fi=0x2c78bef0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
     flags = 0x00008000
     fh_old = 0x00000000
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x0000000000000008
+    fh = 0x0000000000000007
     lock_owner = 0x0000000000000000
 
-fusion_read(path="/love", buf=0x88001320, size=4096, offset=0, fi=0x98f60cb0)
+fusion_read(path="/final", buf=0x00c22a00, size=4096, offset=0, fi=0x2bf8aef0)
     flags = 0x00008000
-    fh_old = 0x00000008
+    fh_old = 0x00000007
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x0000000000000008
+    fh = 0x0000000000000007
     lock_owner = 0x0000000000000000
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
 
  cshou debug: returned from spade_read.
 
 
-fusion_fgetattr(path="/love", statbuf=0x933deb80, fi=0x933decb0)
+fusion_fgetattr(path="/final", statbuf=0x2c78bdc0, fi=0x2c78bef0)
     flags = 0x00000000
-    fh_old = 0x00000008
+    fh_old = 0x00000007
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x0000000000000008
+    fh = 0x0000000000000007
     lock_owner = 0x0000000000000000
-    st_dev = 2049
-    st_ino = 16778662
-    st_mode = 0100664
+    st_dev = 64517
+    st_ino = 7403238
+    st_mode = 0100644
     st_nlink = 1
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
-    st_size = 13
+    st_size = 14
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f447
-    st_mtime = 0x5069f447
-    st_ctime = 0x5069f447
+    st_atime = 0x5081e24f
+    st_mtime = 0x5081e24f
+    st_ctime = 0x5081e24f
 
-fusion_flush(path="/love", fi=0x99f62cb0)
+fusion_flush(path="/final", fi=0x2bf8aef0)
     flags = 0x00000000
-    fh_old = 0x00000008
+    fh_old = 0x00000007
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x0000000000000008
-    lock_owner = 0x7d61d9daa78a4971
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/love", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love"
+    fh = 0x0000000000000007
+    lock_owner = 0xe09063d1a0be9920
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
 
-fusion_release(path="/love", fi=0x99761cb0)
+fusion_release(path="/final", fi=0x2c78bef0)
     flags = 0x00008000
-    fh_old = 0x00000008
+    fh_old = 0x00000007
     writepage = 0
     direct_io = 0
     keep_cache = 0
-    fh = 0x0000000000000008
+    fh = 0x0000000000000007
     lock_owner = 0x0000000000000000
 
-=========DFZ debug _release(): /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/love unlinked from local node. 
+=========DFZ debug _release(): /home/cshou/FusionFS/fusionFS/fusion_root/final unlinked from local node. 
 
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
+fusion_getattr(path="/final", statbuf=0x2bf8adf0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
 
-fusion_getattr(path="/", statbuf=0x933deb80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
 
 
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
+ ===========DFZ debug: _getattr() zht_lookup() = 192.168.1.22. 
 
 
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/final transferred from 192.168.1.22. 
 
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
+    st_dev = 64517
+    st_ino = 7403238
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1045
+    st_gid = 1046
+    st_rdev = 0
+    st_size = 14
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5081e275
+    st_mtime = 0x5081e275
+    st_ctime = 0x5081e275
+
+fusion_truncate(path="/final", newsize=0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+
+fusion_getattr(path="/final", statbuf=0x2c78bd10)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
+
+
+ ===========DFZ debug: _getattr() zht_lookup() = 192.168.1.22. 
+
+
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/final transferred from 192.168.1.22 because local copy might be outdated. 
+
+    st_dev = 64517
+    st_ino = 7403238
+    st_mode = 0100644
+    st_nlink = 1
+    st_uid = 1045
+    st_gid = 1046
+    st_rdev = 0
+    st_size = 14
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x5081e275
+    st_mtime = 0x5081e275
+    st_ctime = 0x5081e275
+
+fusion_open(path"/final", fi=0x2bf8aef0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+fusion_flush(path="/final", fi=0x2c78bef0)
+    flags = 0x00000000
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0xe09063d1a0be9920
+
+fusion_getxattr(path = "/final", name = "security.capability", value = 0x00000000, size = 0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+    ERROR fusion_getxattr lgetxattr: No data available
+
+fusion_write(path="/final", buf=0x2ea51060, size=14, offset=0, fi=0x2c78c040)
+    flags = 0x00008001
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+
+ cshou debug: returned from spade_write.
+
+
+fusion_flush(path="/final", fi=0x2bf8aef0)
+    flags = 0x00000000
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0xe09063d1a0be9920
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/final", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/final"
+
+fusion_release(path="/final", fi=0x2c78bef0)
+    flags = 0x00008001
+    fh_old = 0x00000007
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000007
+    lock_owner = 0x0000000000000000
+
+fusion_getattr(path="/", statbuf=0x2bf8adc0)
+    fusion_fullpath:  rootdir = "/home/cshou/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/FusionFS/fusionFS/fusion_root/"
+
+ ===========CSHOU debug: _getattr() the local IP got: 192.168.1.23 
+
+
+ ===========DFZ debug: _getattr() zht_lookup() =  final . 
+
+
+ ===========DFZ debug: _getattr() /home/cshou/FusionFS/fusionFS/fusion_root/ exists in local. 
+
+    st_dev = 64517
+    st_ino = 7402770
+    st_mode = 040755
     st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
+    st_uid = 1045
+    st_gid = 1046
     st_rdev = 0
     st_size = 4096
     st_blksize = 4096
     st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f447
-    st_ctime = 0x5069f447
+    st_atime = 0x5080dbc4
+    st_mtime = 0x5081e275
+    st_ctime = 0x5081e275
 
-fusion_access(path="/", mask=04)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
-fusion_getattr(path="/", statbuf=0x99761b80)
-    fusion_fullpath:  rootdir = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root", path = "/", fpath = "/home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/"
-
- ===========CSHOU debug: _getattr() the local IP got: 216.47.142.223 
-
-
- ===========DFZ debug: _getattr() zht_lookup() =  love . 
-
-
- ===========DFZ debug: _getattr() /home/cshou/DataSys/PAFS/FusionFS/fusionFS/fusion_root/ exists in local. 
-
-    st_dev = 2049
-    st_ino = 16778661
-    st_mode = 040700
-    st_nlink = 2
-    st_uid = 1000
-    st_gid = 1000
-    st_rdev = 0
-    st_size = 4096
-    st_blksize = 4096
-    st_blocks = 8
-    st_atime = 0x5069f369
-    st_mtime = 0x5069f447
-    st_ctime = 0x5069f447
-
-fusion_destroy(userdata=0x00e88ee0)
+fusion_destroy(userdata=0x00c00e30)

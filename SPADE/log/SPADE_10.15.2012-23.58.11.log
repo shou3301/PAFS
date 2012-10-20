@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2012-10-15T23:58:11</date>
+  <millis>1350363491711</millis>
+  <sequence>0</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog//home/cshou/SPADE/database/nioneo_logical.log</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog</class>
+  <method>doInternalRecovery</method>
+  <thread>15</thread>
+  <message>Non clean shutdown detected on log [/home/cshou/SPADE/database/nioneo_logical.log.1]. Recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:12</date>
+  <millis>1350363492601</millis>
+  <sequence>1</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog//home/cshou/SPADE/database/index/lucene.log</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog</class>
+  <method>doInternalRecovery</method>
+  <thread>15</thread>
+  <message>Non clean shutdown detected on log [/home/cshou/SPADE/database/index/lucene.log.1]. Recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493301</millis>
+  <sequence>2</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.TxManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.TxManager</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Unresolved transactions found, recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493347</millis>
+  <sequence>3</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.TxManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.TxManager</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Recovery completed, all transactions have been resolved to a consistent state.</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493524</millis>
+  <sequence>4</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Starting Neo Server on port [7474] with [80] threads available</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493549</millis>
+  <sequence>5</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493553</millis>
+  <sequence>6</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Using database at /home/cshou/SPADE/database</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493555</millis>
+  <sequence>7</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>WARNING</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>No database tuning properties set in the property file, using defaults. Please specify the performance properties file with org.neo4j.server.db.tuning.properties in the server properties file [null].</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493580</millis>
+  <sequence>8</sequence>
+  <logger>org.neo4j.server.modules.DiscoveryModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted discovery module at [/]</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493625</millis>
+  <sequence>9</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "CypherPlugin"</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493628</millis>
+  <sequence>10</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "GremlinPlugin"</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493629</millis>
+  <sequence>11</sequence>
+  <logger>org.neo4j.server.modules.RESTApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted REST API at [/db/data]</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493630</millis>
+  <sequence>12</sequence>
+  <logger>org.neo4j.server.modules.ManagementApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted management API at [/db/manage]</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493697</millis>
+  <sequence>13</sequence>
+  <logger>org.neo4j.server.modules.WebAdminModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted webadmin at [/webadmin]</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493714</millis>
+  <sequence>14</sequence>
+  <logger>org.neo4j.server.web.Jetty6WebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounting static content at [/webadmin] from [webadmin-html]</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493745</millis>
+  <sequence>15</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>jetty-6.1.25</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:13</date>
+  <millis>1350363493886</millis>
+  <sequence>16</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494088</millis>
+  <sequence>17</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.webadmin.rest</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494166</millis>
+  <sequence>18</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.webadmin.rest.MonitorService
+  class org.neo4j.server.webadmin.rest.ConsoleService
+  class org.neo4j.server.webadmin.rest.RootService
+  class org.neo4j.server.webadmin.rest.JmxService</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494167</millis>
+  <sequence>19</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494269</millis>
+  <sequence>20</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494866</millis>
+  <sequence>21</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.web</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494924</millis>
+  <sequence>22</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.web.BatchOperationService
+  class org.neo4j.server.rest.web.DatabaseMetadataService
+  class org.neo4j.server.rest.web.RestfulGraphDatabase
+  class org.neo4j.server.rest.web.ResourcesService
+  class org.neo4j.server.rest.web.ExtensionService</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494925</millis>
+  <sequence>23</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Provider classes found:
+  class org.neo4j.server.rest.web.DatabaseBlockedExceptionMapper</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:14</date>
+  <millis>1350363494928</millis>
+  <sequence>24</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495278</millis>
+  <sequence>25</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.discovery</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495315</millis>
+  <sequence>26</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.discovery.DiscoveryService</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495316</millis>
+  <sequence>27</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495319</millis>
+  <sequence>28</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495494</millis>
+  <sequence>29</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Started SelectChannelConnector@localhost:7474</message>
+</record>
+<record>
+  <date>2012-10-15T23:58:15</date>
+  <millis>1350363495496</millis>
+  <sequence>30</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Server started on [http://localhost:7474/]</message>
+</record>
+<record>
+  <date>2012-10-16T00:02:19</date>
+  <millis>1350363739938</millis>
+  <sequence>31</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>34</thread>
+  <message>Enter RECEIVE FILE ================================</message>
+</record>
+<record>
+  <date>2012-10-16T00:02:19</date>
+  <millis>1350363739941</millis>
+  <sequence>32</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>34</thread>
+  <message>Putting net process: type:Process|subtype:NetworkProc|source host:192.168.1.22|destination host:192.168.1.23|source path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|destination path:/home/cshou/FusionFS/fusionFS/fusion_root/omg</message>
+</record>
+<record>
+  <date>2012-10-16T00:02:19</date>
+  <millis>1350363739943</millis>
+  <sequence>33</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>34</thread>
+  <message>Putting file vertex:type:Artifact|subtype:File|hostaddress:192.168.1.23|filename:omg|path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|size:13|lastmodified_unix:1350363739000|lastmodified_simple:Tue Oct 16 0:02:19 2012</message>
+</record>
+<record>
+  <date>2012-10-16T00:02:19</date>
+  <millis>1350363739945</millis>
+  <sequence>34</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>34</thread>
+  <message>Putting generated edge: type:WasGeneratedBy</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808707</millis>
+  <sequence>35</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>36</thread>
+  <message>Enter RECEIVE FILE ================================</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808709</millis>
+  <sequence>36</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>36</thread>
+  <message>Putting net process: type:Process|subtype:NetworkProc|source host:192.168.1.22|destination host:192.168.1.23|source path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|destination path:/home/cshou/FusionFS/fusionFS/fusion_root/omg</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808711</millis>
+  <sequence>37</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>36</thread>
+  <message>Putting file vertex:type:Artifact|subtype:File|hostaddress:192.168.1.23|filename:omg|path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|size:0|lastmodified_unix:1350363808000|lastmodified_simple:Tue Oct 16 0:03:28 2012</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808713</millis>
+  <sequence>38</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>36</thread>
+  <message>Putting generated edge: type:WasGeneratedBy</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808827</millis>
+  <sequence>39</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>37</thread>
+  <message>Enter RECEIVE FILE ================================</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808829</millis>
+  <sequence>40</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>37</thread>
+  <message>Putting net process: type:Process|subtype:NetworkProc|source host:192.168.1.22|destination host:192.168.1.23|source path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|destination path:/home/cshou/FusionFS/fusionFS/fusion_root/omg</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808831</millis>
+  <sequence>41</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>37</thread>
+  <message>Putting file vertex:type:Artifact|subtype:File|hostaddress:192.168.1.23|filename:omg|path:/home/cshou/FusionFS/fusionFS/fusion_root/omg|size:13|lastmodified_unix:1350363808000|lastmodified_simple:Tue Oct 16 0:03:28 2012</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:28</date>
+  <millis>1350363808833</millis>
+  <sequence>42</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>receivefile</method>
+  <thread>37</thread>
+  <message>Putting generated edge: type:WasGeneratedBy</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821450</millis>
+  <sequence>43</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>write</method>
+  <thread>38</thread>
+  <message>Enter WRITE ================================</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821452</millis>
+  <sequence>44</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>write</method>
+  <thread>38</thread>
+  <message>Trying to reach process with PID=11853</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821457</millis>
+  <sequence>45</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>checkProgramTree</method>
+  <thread>38</thread>
+  <message>Putting program vertext:
+type:Process|subtype:Program|pidname:cat|pid:11853|ppid:9730|starttime_unix:1350363807610|starttime_simple:Tue Oct 16 0:03:27 2012|group:11853|sessionid:9730|commandline:cat |hostname:hec-02|hostaddress:192.168.1.23|environment:TERM=xterm-256color, SHELL=/bin/bash, SSH_CLIENT=192.168.1.21 36534 22, SSH_TTY=/dev/pts/1, USER=cshou, LD_LIBRARY_PATH=/mnt/common/cshou/usr/include:/mnt/common/cshou/usr/lib:/mnt/common/cshou/FusionFS/fusionFS/src/ffsnet:/mnt/common/cshou/FusionFS/fusionFS/src/udt/src:/mnt/common/cshou/FusionFS/fusionFS/src/provenance, LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.svgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:, MAIL=/var/mail/cshou, PATH=/mnt/common/cshou/usr/jdk1.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games, PWD=/home/cshou/FusionFS/fusionFS/fusion_mount, JAVA_HOME=/mnt/common/cshou/usr/jdk1.7.0, LANG=en_US.UTF-8, HISTCONTROL=ignoreboth, SHLVL=1, HOME=/export/home/cshou, LOGNAME=cshou, SSH_CONNECTION=192.168.1.21 36534 192.168.1.23 22, LESSOPEN=| /usr/bin/lesspipe %s, LESSCLOSE=/usr/bin/lesspipe %s %s, OLDPWD=/home/cshou/FusionFS/fusionFS, _=/bin/cat, </message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821460</millis>
+  <sequence>46</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>checkProgramTree</method>
+  <thread>38</thread>
+  <message>Putting temp agent vertex:
+type:Agent|uid:1045|gid:1046</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821462</millis>
+  <sequence>47</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>checkProgramTree</method>
+  <thread>38</thread>
+  <message>Putting WasControlledBy edge: between program vertex and temp agent</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821464</millis>
+  <sequence>48</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>write</method>
+  <thread>38</thread>
+  <message>Putting File vertex:
+type:Artifact|subtype:File|hostaddress:192.168.1.23|filename:omg|path:/omg|size:0|lastmodified_unix:0|lastmodified_simple:Wed Dec 31 18:00:00 1969</message>
+</record>
+<record>
+  <date>2012-10-16T00:03:41</date>
+  <millis>1350363821466</millis>
+  <sequence>49</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>write</method>
+  <thread>38</thread>
+  <message>Putting WasGeneratedBy edge:
+type:WasGeneratedBy|iotime:14|endtime:1350363821464</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939137</millis>
+  <sequence>50</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>read</method>
+  <thread>39</thread>
+  <message>Enter READ ================================</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939139</millis>
+  <sequence>51</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>read</method>
+  <thread>39</thread>
+  <message>Trying to reach process with PID=11866</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939141</millis>
+  <sequence>52</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>SEVERE</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>createProgramVertex</method>
+  <thread>39</thread>
+  <exception>
+    <message>java.io.FileNotFoundException: /proc/11866/status (No such file or directory)</message>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>open</method>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>138</line>
+    </frame>
+    <frame>
+      <class>java.io.FileInputStream</class>
+      <method>&lt;init&gt;</method>
+      <line>97</line>
+    </frame>
+    <frame>
+      <class>java.io.FileReader</class>
+      <method>&lt;init&gt;</method>
+      <line>58</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>createProgramVertex</method>
+      <line>177</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>checkProgramTree</method>
+      <line>280</line>
+    </frame>
+    <frame>
+      <class>spade.reporter.FusionFUSE</class>
+      <method>read</method>
+      <line>323</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939145</millis>
+  <sequence>53</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>read</method>
+  <thread>39</thread>
+  <message>Putting File vertext: 
+type:Artifact|subtype:File|hostaddress:192.168.1.23|filename:omg|path:/omg|size:0|lastmodified_unix:0|lastmodified_simple:Wed Dec 31 18:00:00 1969</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939147</millis>
+  <sequence>54</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>39</thread>
+  <message>Not putting edge. Source is null</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939149</millis>
+  <sequence>55</sequence>
+  <logger>spade.core.Buffer</logger>
+  <level>WARNING</level>
+  <class>spade.core.Buffer</class>
+  <method>putEdge</method>
+  <thread>39</thread>
+  <message>Not putting edge. End vertices are equal</message>
+</record>
+<record>
+  <date>2012-10-16T00:05:39</date>
+  <millis>1350363939151</millis>
+  <sequence>56</sequence>
+  <logger>spade.reporter.FusionFUSE</logger>
+  <level>INFO</level>
+  <class>spade.reporter.FusionFUSE</class>
+  <method>read</method>
+  <thread>39</thread>
+  <message>Putting Used edge: 
+type:Used|iotime:17|endtime:1350363939145</message>
+</record>
+</log>

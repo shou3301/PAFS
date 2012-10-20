@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2012-10-19T11:41:02</date>
+  <millis>1350664862644</millis>
+  <sequence>0</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog//home/cshou/SPADE/database/nioneo_logical.log</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog</class>
+  <method>doInternalRecovery</method>
+  <thread>15</thread>
+  <message>Non clean shutdown detected on log [/home/cshou/SPADE/database/nioneo_logical.log.1]. Recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:03</date>
+  <millis>1350664863437</millis>
+  <sequence>1</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog//home/cshou/SPADE/database/index/lucene.log</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog</class>
+  <method>doInternalRecovery</method>
+  <thread>15</thread>
+  <message>Non clean shutdown detected on log [/home/cshou/SPADE/database/index/lucene.log.1]. Recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:03</date>
+  <millis>1350664863898</millis>
+  <sequence>2</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.TxManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.TxManager</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Unresolved transactions found, recovery started ...</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:03</date>
+  <millis>1350664863942</millis>
+  <sequence>3</sequence>
+  <logger>org.neo4j.kernel.impl.transaction.TxManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.kernel.impl.transaction.TxManager</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Recovery completed, all transactions have been resolved to a consistent state.</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864114</millis>
+  <sequence>4</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Starting Neo Server on port [7474] with [80] threads available</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864137</millis>
+  <sequence>5</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Logging to org.slf4j.impl.JDK14LoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864141</millis>
+  <sequence>6</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Using database at /home/cshou/SPADE/database</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864143</millis>
+  <sequence>7</sequence>
+  <logger>org.neo4j.server.database.Database</logger>
+  <level>WARNING</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>No database tuning properties set in the property file, using defaults. Please specify the performance properties file with org.neo4j.server.db.tuning.properties in the server properties file [null].</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864168</millis>
+  <sequence>8</sequence>
+  <logger>org.neo4j.server.modules.DiscoveryModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted discovery module at [/]</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864211</millis>
+  <sequence>9</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "CypherPlugin"</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864214</millis>
+  <sequence>10</sequence>
+  <logger>org.neo4j.server.plugins.PluginManager</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Loaded server plugin "GremlinPlugin"</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864215</millis>
+  <sequence>11</sequence>
+  <logger>org.neo4j.server.modules.RESTApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted REST API at [/db/data]</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864216</millis>
+  <sequence>12</sequence>
+  <logger>org.neo4j.server.modules.ManagementApiModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted management API at [/db/manage]</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864296</millis>
+  <sequence>13</sequence>
+  <logger>org.neo4j.server.modules.WebAdminModule</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounted webadmin at [/webadmin]</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864313</millis>
+  <sequence>14</sequence>
+  <logger>org.neo4j.server.web.Jetty6WebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Mounting static content at [/webadmin] from [webadmin-html]</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864344</millis>
+  <sequence>15</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>jetty-6.1.25</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864481</millis>
+  <sequence>16</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>NO JSP Support for /webadmin, did not find org.apache.jasper.servlet.JspServlet</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864701</millis>
+  <sequence>17</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.webadmin.rest</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864777</millis>
+  <sequence>18</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.webadmin.rest.ConsoleService
+  class org.neo4j.server.webadmin.rest.RootService
+  class org.neo4j.server.webadmin.rest.MonitorService
+  class org.neo4j.server.webadmin.rest.JmxService</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864778</millis>
+  <sequence>19</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:04</date>
+  <millis>1350664864878</millis>
+  <sequence>20</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865455</millis>
+  <sequence>21</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.web</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865512</millis>
+  <sequence>22</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.web.ResourcesService
+  class org.neo4j.server.rest.web.ExtensionService
+  class org.neo4j.server.rest.web.BatchOperationService
+  class org.neo4j.server.rest.web.DatabaseMetadataService
+  class org.neo4j.server.rest.web.RestfulGraphDatabase</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865513</millis>
+  <sequence>23</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Provider classes found:
+  class org.neo4j.server.rest.web.DatabaseBlockedExceptionMapper</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865516</millis>
+  <sequence>24</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865835</millis>
+  <sequence>25</sequence>
+  <logger>com.sun.jersey.api.core.PackagesResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.PackagesResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>Scanning for root resource and provider classes in the packages:
+  org.neo4j.server.rest.discovery</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865874</millis>
+  <sequence>26</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>logClasses</method>
+  <thread>15</thread>
+  <message>Root resource classes found:
+  class org.neo4j.server.rest.discovery.DiscoveryService</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865874</millis>
+  <sequence>27</sequence>
+  <logger>com.sun.jersey.api.core.ScanningResourceConfig</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.api.core.ScanningResourceConfig</class>
+  <method>init</method>
+  <thread>15</thread>
+  <message>No provider classes found.</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:05</date>
+  <millis>1350664865877</millis>
+  <sequence>28</sequence>
+  <logger>com.sun.jersey.server.impl.application.WebApplicationImpl</logger>
+  <level>INFO</level>
+  <class>com.sun.jersey.server.impl.application.WebApplicationImpl</class>
+  <method>_initiate</method>
+  <thread>15</thread>
+  <message>Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:06</date>
+  <millis>1350664866037</millis>
+  <sequence>29</sequence>
+  <logger>org.mortbay.log</logger>
+  <level>INFO</level>
+  <class>org.mortbay.log.Slf4jLog</class>
+  <method>info</method>
+  <thread>15</thread>
+  <message>Started SelectChannelConnector@localhost:7474</message>
+</record>
+<record>
+  <date>2012-10-19T11:41:06</date>
+  <millis>1350664866038</millis>
+  <sequence>30</sequence>
+  <logger>org.neo4j.server.NeoServerWithEmbeddedWebServer</logger>
+  <level>INFO</level>
+  <class>org.neo4j.server.logging.Logger</class>
+  <method>log</method>
+  <thread>15</thread>
+  <message>Server started on [http://localhost:7474/]</message>
+</record>
+</log>

@@ -230,7 +230,6 @@ void* transfile(/*void* usocket*/ void* ti)
 		int64_t size = ifs.tellg();
 		ifs.seekg(0, ios::beg);
 
-
 		/* send file size information */
 		if (UDT::ERROR == UDT::send(fhandle, (char*)&size, sizeof(int64_t), 0))	{
 

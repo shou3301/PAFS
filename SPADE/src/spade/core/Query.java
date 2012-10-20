@@ -832,8 +832,9 @@ public class Query {
 
             List<AbstractVertex> networkVertices = new LinkedList<AbstractVertex>();
             for (AbstractVertex currentVertex : graph.vertexSet()) {
-                //if (currentVertex.type().equalsIgnoreCase("Network")) {
-                if (currentVertex.getAnnotation("network").equalsIgnoreCase("true")) {
+                if (currentVertex.getAnnotation("subtype").equalsIgnoreCase("network")) {
+            	//if (currentVertex.type().equalsIgnoreCase("Network")) {
+                //if (currentVertex.getAnnotation("network").equalsIgnoreCase("true")) {
                     networkVertices.add(currentVertex);
                 }
             }

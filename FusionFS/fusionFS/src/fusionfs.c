@@ -45,6 +45,7 @@
 #include <sys/xattr.h>
 #include <stdbool.h>
 #include <sys/time.h>
+#include <sys/stat.h>
 
 #include "log.h"
 #include "./zht/inc/c_zhtclient.h"
@@ -206,6 +207,8 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 	char myaddr[PATH_MAX] = {0};
 	net_getmyip(myaddr);
 
+	bool is_transfer = false;
+
 	log_msg("\n ===========CSHOU debug: _getattr() the local IP got: %s \n\n", myaddr);
 
 	if (ZHT_LOOKUP_FAIL == status) { /* if not found in ZHT */
@@ -243,7 +246,8 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 
 			// ADDED BY CSHOU
 			if (strcmp(res, myaddr) != 0 && strcmp(res, "") != 0)
-				spade_receivefile(fpath, res, fpath);
+				is_transfer = true;
+				//spade_receivefile(fpath, res, fpath, statbuf->st_size, statbuf->st_mtime);
 
 			log_msg("\n ===========DFZ debug: _getattr() %s transferred from %s. \n\n",
 					fpath, res);
@@ -254,7 +258,8 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 
 			// ADDED BY CSHOU
 			if (strcmp(res, myaddr) != 0)
-				spade_receivefile(fpath, res, fpath);
+				is_transfer = true;
+				//spade_receivefile(fpath, res, fpath, statbuf->st_size, statbuf->st_mtime);
 
 			log_msg("\n ===========DFZ debug: _getattr() %s transferred from %s because local copy might be outdated. \n\n",
 					fpath, res);
@@ -271,6 +276,12 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 		retstat = fusion_error("fusion_getattr lstat");
 
 	log_stat(statbuf);
+
+	if (is_transfer) {
+		char s_size[20];
+		sprintf(s_size, "%zd", statbuf->st_size);
+		spade_receivefile(fpath, res, fpath, s_size, ctime(&statbuf->st_mtime));
+	}
 
 	return retstat;
 }
@@ -707,6 +718,19 @@ int fusion_read(const char *path, char *buf, size_t size, off_t offset,
 	char fpath[PATH_MAX] = {0};
 	fusion_fullpath(fpath, path);
 
+	// added by cshou
+	struct stat sb;
+	char s_size[20];
+	char s_time[50];
+	if (stat(fpath, &sb) != -1) {
+		sprintf(s_size, "%zd", sb.st_size);
+		sprintf(s_time, "%s", ctime(&sb.st_mtime));
+	}
+	/*else {
+		s_size = "";
+		s_time = "";
+	}*/
+
 	struct timeval starttime, endtime;
     long seconds, useconds, mtime;
     gettimeofday(&starttime, NULL);
@@ -721,7 +745,7 @@ int fusion_read(const char *path, char *buf, size_t size, off_t offset,
     mtime = (seconds * 1000000 + useconds);
     int iotime = mtime;
 
-    spade_read(fpath, fuse_get_context()->pid, iotime, 0);
+	spade_read(fpath, fuse_get_context()->pid, iotime, 0, s_size, s_time);
 
     log_msg("\n cshou debug: returned from spade_read.\n\n");
 

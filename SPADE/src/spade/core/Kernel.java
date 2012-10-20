@@ -601,7 +601,9 @@ public class Kernel {
      * output.
      */
     public static void queryCommand(String line, PrintStream outputStream) {
-        Graph resultGraph = Query.executeQuery(line, false);
+        //Graph resultGraph = Query.executeQuery(line, false);
+	Graph resultGraph = Query.executeQuery(line, true);
+
         if (resultGraph != null) {
             String[] tokens = line.split("\\s+");
             String outputFile = tokens[tokens.length - 1];

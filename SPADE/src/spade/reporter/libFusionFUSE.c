@@ -122,15 +122,17 @@ static int spade_link(const char *from, const char *to, pid_t pid) {
     return 0;
 }
 
-static int spade_read(const char *path, pid_t pid, int iotime, int link) {
+static int spade_read(const char *path, pid_t pid, int iotime, int link, const char *size, const char *mtime) {
 
     (*jvm)->AttachCurrentThread(jvm, (void**) &env, NULL);
     
     print_log("read", path, (int)pid);
 
     jstring jpath = (*env)->NewStringUTF(env, path);
+    jstring jsize = (*env)->NewStringUTF(env, size);
+    jstring jmtime = (*env)->NewStringUTF(env, mtime);
 
-    (*env)->CallVoidMethod(env, reporterInstance, readMethod, pid, iotime, jpath, link);
+    (*env)->CallVoidMethod(env, reporterInstance, readMethod, pid, iotime, jpath, link, jsize, jmtime);
 
     return 0;
 }
@@ -148,15 +150,17 @@ static int spade_write(const char *path, pid_t pid, int iotime, int link) {
     return 0;
 }
 
-static int spade_receivefile(const char *remote_path, const char *remote_ip, const char *local_path) {
+static int spade_receivefile(const char *remote_path, const char *remote_ip, const char *local_path, const char *size, const char *mtime) {
 
     (*jvm)->AttachCurrentThread(jvm, (void**) &env, NULL);
 
     jstring j_remote_path = (*env)->NewStringUTF(env, remote_path);
     jstring j_remote_ip = (*env)->NewStringUTF(env, remote_ip);
     jstring j_local_path = (*env)->NewStringUTF(env, local_path);
+    jstring jsize = (*env)->NewStringUTF(env, size);
+    jstring jmtime = (*env)->NewStringUTF(env, mtime);
 
-    (*env)->CallVoidMethod(env, reporterInstance, receivefileMethod, j_remote_path, j_remote_ip, j_local_path);
+    (*env)->CallVoidMethod(env, reporterInstance, receivefileMethod, j_remote_path, j_remote_ip, j_local_path, jsize, jmtime);
 
     return 0;
 }
@@ -463,6 +467,8 @@ int bridge_read(int sock) {
     char *s_pid = (char *) malloc(BUFFER_SIZE * sizeof(char));
     char *s_iotime = (char *) malloc(BUFFER_SIZE * sizeof(char));
     char *s_link = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *s_size = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *s_mtime = (char *) malloc(BUFFER_SIZE * sizeof(char));
     
     // Read path
     bzero(buffer, BUFFER_SIZE);
@@ -507,6 +513,26 @@ int bridge_read(int sock) {
         strcpy(s_link, buffer);
     }
 
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- read link -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(s_size, buffer);
+    }
+
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- read link -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(s_mtime, buffer);
+    }
+
     pid_t pid = (pid_t) atoi(s_pid);
     int iotime = atoi(s_iotime);
     int link = atoi(s_link);
@@ -514,7 +540,7 @@ int bridge_read(int sock) {
     free(s_link);
     free(s_iotime);
 
-    spade_read(path, pid, iotime, link);
+    spade_read(path, pid, iotime, link, s_size, s_mtime);
 
     return 1;
 }
@@ -592,6 +618,8 @@ int bridge_receivefile(int sock) {
     char *remote_path = (char *) malloc(BUFFER_SIZE * sizeof(char));
     char *remote_ip = (char *) malloc(BUFFER_SIZE * sizeof(char));
     char *local_path = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *s_size = (char *) malloc(BUFFER_SIZE * sizeof(char));
+    char *s_mtime = (char *) malloc(BUFFER_SIZE * sizeof(char));
 
     // Read path
     bzero(buffer, BUFFER_SIZE);
@@ -626,7 +654,27 @@ int bridge_receivefile(int sock) {
         strcpy(local_path, buffer);
     }
 
-    spade_receivefile(remote_path, remote_ip, local_path);
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- read link -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(s_size, buffer);
+    }
+
+    bzero(buffer, BUFFER_SIZE);
+    length = recv(new_server_socket, buffer, BUFFER_SIZE, 0);
+    if (length < 0) {
+        printf("Thread %d -- read link -- ERROR reading from socket", new_server_socket);
+        return 0;
+    }
+    else {
+        strcpy(s_mtime, buffer);
+    }
+
+    spade_receivefile(remote_path, remote_ip, local_path, s_size, s_mtime);
 
     return 1;
 }
@@ -852,13 +900,13 @@ JNIEXPORT jint JNICALL Java_spade_reporter_FusionFUSE_launchFUSEServer (JNIEnv *
     env = e;
 
     FUSEReporterClass = (*env)->FindClass(env, "spade/reporter/FusionFUSE");
-    readMethod = (*env)->GetMethodID(env, FUSEReporterClass, "read", "(IILjava/lang/String;I)V");
+    readMethod = (*env)->GetMethodID(env, FUSEReporterClass, "read", "(IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;)V");
     writeMethod = (*env)->GetMethodID(env, FUSEReporterClass, "write", "(IILjava/lang/String;I)V");
     readlinkMethod = (*env)->GetMethodID(env, FUSEReporterClass, "readlink", "(IILjava/lang/String;)V");
     renameMethod = (*env)->GetMethodID(env, FUSEReporterClass, "rename", "(IILjava/lang/String;Ljava/lang/String;II)V");
     linkMethod = (*env)->GetMethodID(env, FUSEReporterClass, "link", "(ILjava/lang/String;Ljava/lang/String;)V");
     unlinkMethod = (*env)->GetMethodID(env, FUSEReporterClass, "unlink", "(ILjava/lang/String;)V");
-    receivefileMethod = (*env)->GetMethodID(env, FUSEReporterClass, "receivefile", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
+    receivefileMethod = (*env)->GetMethodID(env, FUSEReporterClass, "receivefile", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
     createMethod = (*env)->GetMethodID(env, FUSEReporterClass, "create", "(ILjava/lang/String;)V");
     sendfileMethod = (*env)->GetMethodID(env, FUSEReporterClass, "sendfile", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
 

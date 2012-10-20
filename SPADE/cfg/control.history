@@ -36,3 +36,39 @@ list reporters
 add reporter FusionFUSE
 add reporter FusionFUSE ~/test
 exit
+list storages
+remove storage Neo4j
+list reporters
+add storage Neo4j /home/cshou/SPADE/database
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+list reporters
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/databse
+add reporter FusionFUSE ~
+list reporters
+exit
+list storages
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit
+add storage Neo4j /home/cshou/SPADE/database
+add reporter FusionFUSE ~
+exit

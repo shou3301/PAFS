@@ -1,0 +1,703 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9c74ae050b, pid=24994, tid=140309736454480
+#
+# JRE version: 7.0-b147
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0-b17 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x53f50b]  JNI_ArgumentPusherVaArg::JNI_ArgumentPusherVaArg(_jmethodID*, __va_list_tag*)+0x1b
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000ce9800):  JavaThread "Thread-12" [_thread_in_vm, id=25071, stack(0x00007f9c677ff000,0x00007f9c68000000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x00007f9c67ffe750, RBX=0x00007f9c67ffe6a0, RCX=0x00007f9c74ac7b4c, RDX=0x00007f9c67ffe700
+RSP=0x00007f9c67ffe640, RBP=0x00007f9c67ffe670, RSI=0x0000000000000000, RDI=0x00007f9c67ffe6a0
+R8 =0x00007f9c60190f48, R9 =0x00007f9c60190f50, R10=0x00007f9c74ac7ad0, R11=0x0000000000000000
+R12=0x00007f9c67ffe700, R13=0x00007f9c67ffe6e0, R14=0x0000000000000000, R15=0x0000000000ce99d0
+RIP=0x00007f9c74ae050b, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f9c67ffe640)
+0x00007f9c67ffe640:   0000000000000000 0000000001000021
+0x00007f9c67ffe650:   00007f9c67ffe6a0 0000000000ce9800
+0x00007f9c67ffe660:   00007f9c67ffe6e0 0000000000000000
+0x00007f9c67ffe670:   00007f9c67ffe830 00007f9c74ac7c1c
+0x00007f9c67ffe680:   00007f9c67ffe669 0000000800000002
+0x00007f9c67ffe690:   00007f9c67ffe600 00007f9c6c67bc20
+0x00007f9c67ffe6a0:   00007f9c68233c38 00007f9c68233c38
+0x00007f9c67ffe6b0:   00007f9c68233c50 00007f9c68233c50
+0x00007f9c67ffe6c0:   00000000fffffffe 00007f9c68233c00
+0x00007f9c67ffe6d0:   00007f9c68233c10 00007f9c7522f230
+0x00007f9c67ffe6e0:   0000000000ce9800 0000000000000000
+0x00007f9c67ffe6f0:   000000000000000e 000000000000002d
+0x00007f9c67ffe700:   0000003000000018 00007f9c67ffe840
+0x00007f9c67ffe710:   00007f9c67ffe750 00007f9c68233c10
+0x00007f9c67ffe720:   00007f9c0000000e 00007f9c74a7c18e
+0x00007f9c67ffe730:   0000000000ce9800 0000000000ce9800
+0x00007f9c67ffe740:   0000000000ce9800 00000000f622da48
+0x00007f9c67ffe750:   00007f9c68233c08 0000000000000000
+0x00007f9c67ffe760:   00007f9c67ffe790 00007f9c60190f40
+0x00007f9c67ffe770:   00007f9c60190f48 00007f9c60190f50
+0x00007f9c67ffe780:   0000000000000000 0000000000ce8f70
+0x00007f9c67ffe790:   00007f9c67ffe7c0 0000000000ce9800
+0x00007f9c67ffe7a0:   0000000000000000 0000000000ce99d0
+0x00007f9c67ffe7b0:   0000000000ce9800 00007f9c60190f50
+0x00007f9c67ffe7c0:   00007f9c67ffe830 00007f9c74add566
+0x00007f9c67ffe7d0:   0000000000ce9800 0000000000000000
+0x00007f9c67ffe7e0:   00007f9c68233c00 00007f9c6c67baf0
+0x00007f9c67ffe7f0:   0000000000ce9800 0000000000ce9800
+0x00007f9c67ffe800:   0000004100000005 0000000000000000
+0x00007f9c67ffe810:   0000000000000000 00007f9c67fff950
+0x00007f9c67ffe820:   00007f9c75e0d040 00007f9c6c67baf0
+0x00007f9c67ffe830:   00007f9c67ffe880 00007f9c6c8bade0 
+
+Instructions: (pc=0x00007f9c74ae050b)
+0x00007f9c74ae04eb:   ff ff ff 90 90 55 48 89 e5 48 89 5d e0 4c 89 65
+0x00007f9c74ae04fb:   e8 49 89 d4 4c 89 6d f0 4c 89 75 f8 48 83 ec 30
+0x00007f9c74ae050b:   48 8b 16 48 89 fb 48 8b 42 10 48 8b 52 18 0f b7
+0x00007f9c74ae051b:   48 42 4c 63 e9 4e 8d 74 ea 40 49 8b 06 48 89 45 
+
+Register to memory mapping:
+
+RAX=0x00007f9c67ffe750 is pointing into the stack for thread: 0x0000000000ce9800
+RBX=0x00007f9c67ffe6a0 is pointing into the stack for thread: 0x0000000000ce9800
+RCX=0x00007f9c74ac7b4c: <offset 0x526b4c> in /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/server/libjvm.so at 0x00007f9c745a1000
+RDX=0x00007f9c67ffe700 is pointing into the stack for thread: 0x0000000000ce9800
+RSP=0x00007f9c67ffe640 is pointing into the stack for thread: 0x0000000000ce9800
+RBP=0x00007f9c67ffe670 is pointing into the stack for thread: 0x0000000000ce9800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f9c67ffe6a0 is pointing into the stack for thread: 0x0000000000ce9800
+R8 =0x00007f9c60190f48 is an unknown value
+R9 =0x00007f9c60190f50 is an unknown value
+R10=0x00007f9c74ac7ad0: <offset 0x526ad0> in /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/server/libjvm.so at 0x00007f9c745a1000
+R11=0x0000000000000000 is an unknown value
+R12=0x00007f9c67ffe700 is pointing into the stack for thread: 0x0000000000ce9800
+R13=0x00007f9c67ffe6e0 is pointing into the stack for thread: 0x0000000000ce9800
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000000ce99d0 is an unknown value
+
+
+Stack: [0x00007f9c677ff000,0x00007f9c68000000],  sp=0x00007f9c67ffe640,  free space=8189k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x53f50b]  JNI_ArgumentPusherVaArg::JNI_ArgumentPusherVaArg(_jmethodID*, __va_list_tag*)+0x1b
+V  [libjvm.so+0x526c1c]  jni_CallVoidMethod+0x14c
+C  [libFusionFUSE.so+0x1de0]  spade_receivefile+0x107
+C  [libFusionFUSE.so+0x329e]  bridge_receivefile+0x1d5
+C  [libFusionFUSE.so+0x3855]  dispatch+0x20b
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x0000000000ce9800 JavaThread "Thread-12" [_thread_in_vm, id=25071, stack(0x00007f9c677ff000,0x00007f9c68000000)]
+  0x00007f9c608a0800 JavaThread "FusionFUSEServer-Thread" [_thread_in_native, id=25030, stack(0x00007f9c6c57c000,0x00007f9c6c67d000)]
+  0x00007f9c60655800 JavaThread "Timer-0" daemon [_thread_blocked, id=25029, stack(0x00007f9c6cabf000,0x00007f9c6cbc0000)]
+  0x00007f9c605f1000 JavaThread "629808856@qtp-1876233337-1 - Acceptor0 SelectChannelConnector@localhost:7474" [_thread_in_native, id=25028, stack(0x00007f9c6ceaf000,0x00007f9c6cfb0000)]
+  0x00007f9c60459800 JavaThread "454239699@qtp-1876233337-0" [_thread_blocked, id=25027, stack(0x00007f9c6cdae000,0x00007f9c6ceaf000)]
+  0x00007f9c60442000 JavaThread "Statistics Gatherer[primitives]" [_thread_blocked, id=25026, stack(0x00007f9c6d6b7000,0x00007f9c6d7b8000)]
+  0x00007f9c60439000 JavaThread "RRD4J Sync Pool [Thread-1]" daemon [_thread_blocked, id=25025, stack(0x00007f9c6d8b9000,0x00007f9c6d9ba000)]
+  0x00007f9c602e0800 JavaThread "Neo4j UDC Timer" daemon [_thread_blocked, id=25022, stack(0x00007f9c6cfb0000,0x00007f9c6d0b1000)]
+  0x00007f9c60243800 JavaThread "remoteSketch-Thread" [_thread_in_native, id=25021, stack(0x00007f9c6d0b1000,0x00007f9c6d1b2000)]
+  0x00007f9c60242000 JavaThread "remoteQuery-Thread" [_thread_in_native, id=25020, stack(0x00007f9c6d1b2000,0x00007f9c6d2b3000)]
+  0x00007f9c60240000 JavaThread "querySocket-Thread" [_thread_in_native, id=25019, stack(0x00007f9c6d2b3000,0x00007f9c6d3b4000)]
+  0x00007f9c60235800 JavaThread "controlSocket-Thread" [_thread_in_native, id=25018, stack(0x00007f9c6d3b4000,0x00007f9c6d4b5000)]
+  0x0000000000b04800 JavaThread "mainSPADE-Thread" [_thread_blocked, id=25017, stack(0x00007f9c6d4b5000,0x00007f9c6d5b6000)]
+  0x00007f9c60235000 JavaThread "DestroyJavaVM" [_thread_blocked, id=24995, stack(0x00007f9c75cf4000,0x00007f9c75df5000)]
+  0x00007f9c60230800 JavaThread "Wrapper-Connection" daemon [_thread_in_native, id=25014, stack(0x00007f9c6d7b8000,0x00007f9c6d8b9000)]
+  0x00007f9c6022a800 JavaThread "Wrapper-Control-Event-Monitor" daemon [_thread_blocked, id=25012, stack(0x00007f9c6d9ba000,0x00007f9c6dabb000)]
+  0x00007f9c60001000 JavaThread "Service Thread" daemon [_thread_blocked, id=25010, stack(0x00007f9c6e4ec000,0x00007f9c6e5ed000)]
+  0x00007f9c68004000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=25009, stack(0x00007f9c6e5ed000,0x00007f9c6e6ee000)]
+  0x00007f9c68001000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=25008, stack(0x00007f9c6e6ee000,0x00007f9c6e7ef000)]
+  0x0000000000a7c000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=25007, stack(0x00007f9c6e7ef000,0x00007f9c6e8f0000)]
+  0x0000000000a29800 JavaThread "Finalizer" daemon [_thread_blocked, id=25006, stack(0x00007f9c6ea1a000,0x00007f9c6eb1b000)]
+  0x0000000000a21800 JavaThread "Reference Handler" daemon [_thread_blocked, id=25005, stack(0x00007f9c6eb1b000,0x00007f9c6ec1c000)]
+
+Other Threads:
+  0x0000000000a1a000 VMThread [stack: 0x00007f9c6ec1c000,0x00007f9c6ed1d000] [id=25004]
+  0x00007f9c60014000 WatcherThread [stack: 0x00007f9c6e3eb000,0x00007f9c6e4ec000] [id=25011]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 136512K, used 19187K [0x00000000f5560000, 0x00000000fe000000, 0x0000000100000000)
+  eden space 131072K, 10% used [0x00000000f5560000,0x00000000f62d15f8,0x00000000fd560000)
+  from space 5440K, 99% used [0x00000000fdab0000,0x00000000fdffb610,0x00000000fe000000)
+  to   space 5440K, 0% used [0x00000000fd560000,0x00000000fd560000,0x00000000fdab0000)
+ PSOldGen        total 87424K, used 5381K [0x00000000e0000000, 0x00000000e5560000, 0x00000000f5560000)
+  object space 87424K, 6% used [0x00000000e0000000,0x00000000e05414c8,0x00000000e5560000)
+ PSPermGen       total 21248K, used 20246K [0x00000000dae00000, 0x00000000dc2c0000, 0x00000000e0000000)
+  object space 21248K, 95% used [0x00000000dae00000,0x00000000dc1c59f8,0x00000000dc2c0000)
+
+Code Cache  [0x00007f9c70283000, 0x00007f9c704f3000, 0x00007f9c73283000)
+ total_blobs=1005 nmethods=638 adapters=319 free_code_cache=47340Kb largest_free_block=48423488
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 00:1a 80519281                           /mnt/common/cshou/usr/jdk1.7.0/bin/java
+00600000-00601000 rw-p 00000000 00:1a 80519281                           /mnt/common/cshou/usr/jdk1.7.0/bin/java
+00984000-01599000 rw-p 00984000 00:00 0                                  [heap]
+dae00000-dc2c0000 rw-p dae00000 00:00 0 
+dc2c0000-e0000000 rw-p dc2c0000 00:00 0 
+e0000000-e5560000 rw-p e0000000 00:00 0 
+e5560000-f5560000 rw-p e5560000 00:00 0 
+f5560000-fe000000 rw-p f5560000 00:00 0 
+fe000000-100000000 rw-p fe000000 00:00 0 
+7f9c60000000-7f9c608b9000 rw-p 7f9c60000000 00:00 0 
+7f9c608b9000-7f9c64000000 ---p 7f9c608b9000 00:00 0 
+7f9c677ff000-7f9c67802000 ---p 7f9c677ff000 00:00 0 
+7f9c67802000-7f9c68000000 rw-p 7f9c67802000 00:00 0 
+7f9c68000000-7f9c689b6000 rw-p 7f9c68000000 00:00 0 
+7f9c689b6000-7f9c6c000000 ---p 7f9c689b6000 00:00 0 
+7f9c6c47b000-7f9c6c47e000 ---p 7f9c6c47b000 00:00 0 
+7f9c6c47e000-7f9c6c57c000 rw-p 7f9c6c47e000 00:00 0 
+7f9c6c57c000-7f9c6c57f000 ---p 7f9c6c57c000 00:00 0 
+7f9c6c57f000-7f9c6c67d000 rw-p 7f9c6c57f000 00:00 0 
+7f9c6c67d000-7f9c6c6a7000 r-xp 00000000 00:1a 80207915                   /mnt/common/cshou/usr/lib/libfuse.so.2.9.1
+7f9c6c6a7000-7f9c6c8a6000 ---p 0002a000 00:1a 80207915                   /mnt/common/cshou/usr/lib/libfuse.so.2.9.1
+7f9c6c8a6000-7f9c6c8b8000 r--p 00029000 00:1a 80207915                   /mnt/common/cshou/usr/lib/libfuse.so.2.9.1
+7f9c6c8b8000-7f9c6c8b9000 rw-p 0003b000 00:1a 80207915                   /mnt/common/cshou/usr/lib/libfuse.so.2.9.1
+7f9c6c8b9000-7f9c6c8be000 r-xp 00000000 fc:05 7403159                    /home/cshou/SPADE/lib/libFusionFUSE.so
+7f9c6c8be000-7f9c6cabd000 ---p 00005000 fc:05 7403159                    /home/cshou/SPADE/lib/libFusionFUSE.so
+7f9c6cabd000-7f9c6cabe000 r--p 00004000 fc:05 7403159                    /home/cshou/SPADE/lib/libFusionFUSE.so
+7f9c6cabe000-7f9c6cabf000 rw-p 00005000 fc:05 7403159                    /home/cshou/SPADE/lib/libFusionFUSE.so
+7f9c6cabf000-7f9c6cac2000 ---p 7f9c6cabf000 00:00 0 
+7f9c6cac2000-7f9c6cbc0000 rw-p 7f9c6cac2000 00:00 0 
+7f9c6cbc0000-7f9c6cdae000 rw-s 00000000 fc:05 7403206                    /home/cshou/SPADE/database/rrd
+7f9c6cdae000-7f9c6cdb1000 ---p 7f9c6cdae000 00:00 0 
+7f9c6cdb1000-7f9c6ceaf000 rw-p 7f9c6cdb1000 00:00 0 
+7f9c6ceaf000-7f9c6ceb2000 ---p 7f9c6ceaf000 00:00 0 
+7f9c6ceb2000-7f9c6cfb0000 rw-p 7f9c6ceb2000 00:00 0 
+7f9c6cfb0000-7f9c6cfb3000 ---p 7f9c6cfb0000 00:00 0 
+7f9c6cfb3000-7f9c6d0b1000 rw-p 7f9c6cfb3000 00:00 0 
+7f9c6d0b1000-7f9c6d0b4000 ---p 7f9c6d0b1000 00:00 0 
+7f9c6d0b4000-7f9c6d1b2000 rw-p 7f9c6d0b4000 00:00 0 
+7f9c6d1b2000-7f9c6d1b5000 ---p 7f9c6d1b2000 00:00 0 
+7f9c6d1b5000-7f9c6d2b3000 rw-p 7f9c6d1b5000 00:00 0 
+7f9c6d2b3000-7f9c6d2b6000 ---p 7f9c6d2b3000 00:00 0 
+7f9c6d2b6000-7f9c6d3b4000 rw-p 7f9c6d2b6000 00:00 0 
+7f9c6d3b4000-7f9c6d3b7000 ---p 7f9c6d3b4000 00:00 0 
+7f9c6d3b7000-7f9c6d4b5000 rw-p 7f9c6d3b7000 00:00 0 
+7f9c6d4b5000-7f9c6d4b8000 ---p 7f9c6d4b5000 00:00 0 
+7f9c6d4b8000-7f9c6d5b6000 rw-p 7f9c6d4b8000 00:00 0 
+7f9c6d5b6000-7f9c6d5b9000 ---p 7f9c6d5b6000 00:00 0 
+7f9c6d5b9000-7f9c6d6b7000 rw-p 7f9c6d5b9000 00:00 0 
+7f9c6d6b7000-7f9c6d6ba000 ---p 7f9c6d6b7000 00:00 0 
+7f9c6d6ba000-7f9c6d7b8000 rw-p 7f9c6d6ba000 00:00 0 
+7f9c6d7b8000-7f9c6d7bb000 ---p 7f9c6d7b8000 00:00 0 
+7f9c6d7bb000-7f9c6d8b9000 rw-p 7f9c6d7bb000 00:00 0 
+7f9c6d8b9000-7f9c6d8bc000 ---p 7f9c6d8b9000 00:00 0 
+7f9c6d8bc000-7f9c6d9ba000 rw-p 7f9c6d8bc000 00:00 0 
+7f9c6d9ba000-7f9c6d9bd000 ---p 7f9c6d9ba000 00:00 0 
+7f9c6d9bd000-7f9c6dabb000 rw-p 7f9c6d9bd000 00:00 0 
+7f9c6dabb000-7f9c6dac4000 r-xp 00000000 fc:05 7403841                    /home/cshou/SPADE/lib/libwrapper-linux-x86-64.so
+7f9c6dac4000-7f9c6dbc4000 ---p 00009000 fc:05 7403841                    /home/cshou/SPADE/lib/libwrapper-linux-x86-64.so
+7f9c6dbc4000-7f9c6dbc5000 rw-p 00009000 fc:05 7403841                    /home/cshou/SPADE/lib/libwrapper-linux-x86-64.so
+7f9c6dbc5000-7f9c6dbcd000 r-xp 00000000 00:1a 80699451                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libmanagement.so
+7f9c6dbcd000-7f9c6ddcc000 ---p 00008000 00:1a 80699451                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libmanagement.so
+7f9c6ddcc000-7f9c6ddcd000 rw-p 00007000 00:1a 80699451                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libmanagement.so
+7f9c6ddcd000-7f9c6dde2000 r-xp 00000000 00:1a 80699433                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnet.so
+7f9c6dde2000-7f9c6dfe2000 ---p 00015000 00:1a 80699433                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnet.so
+7f9c6dfe2000-7f9c6dfe3000 rw-p 00015000 00:1a 80699433                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnet.so
+7f9c6dfe3000-7f9c6dff3000 r-xp 00000000 00:1a 80699463                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnio.so
+7f9c6dff3000-7f9c6e1f3000 ---p 00010000 00:1a 80699463                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnio.so
+7f9c6e1f3000-7f9c6e1f4000 rw-p 00010000 00:1a 80699463                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libnio.so
+7f9c6e1f4000-7f9c6e1f7000 r--s 0001b000 fc:05 7403850                    /home/cshou/SPADE/lib/wrapper.jar
+7f9c6e1f7000-7f9c6e1f9000 r--s 00005000 fc:05 7403855                    /home/cshou/SPADE/lib/stax-api-1.0.1.jar
+7f9c6e1f9000-7f9c6e1fb000 r--s 00001000 fc:05 7403893                    /home/cshou/SPADE/lib/slf4j-jdk14-1.6.1.jar
+7f9c6e1fb000-7f9c6e1fd000 r--s 00005000 fc:05 7403843                    /home/cshou/SPADE/lib/slf4j-api-1.6.1.jar
+7f9c6e1fd000-7f9c6e1ff000 r--s 0001f000 fc:05 7403852                    /home/cshou/SPADE/lib/servlet-api-2.5-20081211.jar
+7f9c6e1ff000-7f9c6e202000 r--s 0001a000 fc:05 7403876                    /home/cshou/SPADE/lib/server-api-1.5.jar
+7f9c6e202000-7f9c6e281000 r--s 007f6000 fc:05 7403861                    /home/cshou/SPADE/lib/scala-library-2.9.0-1.jar
+7f9c6e281000-7f9c6e285000 r--s 00096000 fc:05 7403889                    /home/cshou/SPADE/lib/rrd4j-2.0.7.jar
+7f9c6e285000-7f9c6e288000 r--s 00014000 fc:05 7403871                    /home/cshou/SPADE/lib/pipes-0.8.jar
+7f9c6e288000-7f9c6e289000 r--s 00006000 fc:05 7403886                    /home/cshou/SPADE/lib/neo4j-udc-1.5.jar
+7f9c6e289000-7f9c6e28b000 r--s 00015000 fc:05 7403890                    /home/cshou/SPADE/lib/org.apache.servicemix.bundles.jline-0.9.94_1.jar
+7f9c6e28b000-7f9c6e28e000 r--s 00032000 fc:05 7403880                    /home/cshou/SPADE/lib/neo4j-shell-1.5.jar
+7f9c6e28e000-7f9c6e29b000 r--s 000a1000 fc:05 7403863                    /home/cshou/SPADE/lib/neo4j-server-1.5.jar
+7f9c6e29b000-7f9c6e2bb000 r--s 001d1000 fc:05 7403859                    /home/cshou/SPADE/lib/neo4j-server-1.5-static-web.jar
+7f9c6e2bb000-7f9c6e2be000 r--s 0001f000 fc:05 7403835                    /home/cshou/SPADE/lib/neo4j-lucene-index-1.5.jar
+7f9c6e2be000-7f9c6e2d1000 r--s 000de000 fc:05 7403842                    /home/cshou/SPADE/lib/neo4j-kernel-1.5.jar
+7f9c6e2d1000-7f9c6e2d3000 r--s 00009000 fc:05 7403888                    /home/cshou/SPADE/lib/neo4j-jmx-1.5.jar
+7f9c6e2d3000-7f9c6e2d4000 r--s 00002000 fc:05 7403830                    /home/cshou/SPADE/lib/neo4j-gremlin-plugin-1.5.jar
+7f9c6e2d4000-7f9c6e2d6000 r--s 0000b000 fc:05 7403867                    /home/cshou/SPADE/lib/neo4j-graph-matching-1.5.jar
+7f9c6e2d6000-7f9c6e2da000 r--s 00022000 fc:05 7403837                    /home/cshou/SPADE/lib/neo4j-graph-algo-1.5.jar
+7f9c6e2da000-7f9c6e2dc000 r--s 00001000 fc:05 7403879                    /home/cshou/SPADE/lib/neo4j-cypher-plugin-1.5.jar
+7f9c6e2dc000-7f9c6e2ef000 r--s 000c9000 fc:05 7403847                    /home/cshou/SPADE/lib/neo4j-cypher-1.5.jar
+7f9c6e2ef000-7f9c6e2f0000 r--s 00005000 fc:05 7403872                    /home/cshou/SPADE/lib/neo4j-community-1.5.jar
+7f9c6e2f0000-7f9c6e2f2000 r--s 00008000 fc:05 7403862                    /home/cshou/SPADE/lib/mimepull-1.6.jar
+7f9c6e2f2000-7f9c6e307000 r--s 00110000 fc:05 7403883                    /home/cshou/SPADE/lib/lucene-core-3.1.0.jar
+7f9c6e307000-7f9c6e309000 r--s 00002000 fc:05 7403684                    /home/cshou/SPADE/lib/log4j-over-slf4j-1.6.1.jar
+7f9c6e309000-7f9c6e30b000 r--s 0000a000 fc:05 7403856                    /home/cshou/SPADE/lib/jsr311-api-1.1.1.jar
+7f9c6e30b000-7f9c6e30d000 r--s 00014000 fc:05 7403844                    /home/cshou/SPADE/lib/jline-0.9.94.jar
+7f9c6e30d000-7f9c6e311000 r--s 00028000 fc:05 7403874                    /home/cshou/SPADE/lib/jetty-util-6.1.25.jar
+7f9c6e311000-7f9c6e318000 r--s 0007d000 fc:05 7403840                    /home/cshou/SPADE/lib/jetty-6.1.25.jar
+7f9c6e318000-7f9c6e31a000 r--s 00010000 fc:05 7403681                    /home/cshou/SPADE/lib/jettison-1.3.jar
+7f9c6e31a000-7f9c6e32c000 r--s 0009d000 fc:05 7403868                    /home/cshou/SPADE/lib/jersey-server-1.9.jar
+7f9c6e32c000-7f9c6e32e000 r--s 0000b000 fc:05 7403892                    /home/cshou/SPADE/lib/jersey-multipart-1.9.jar
+7f9c6e32e000-7f9c6e338000 r--s 00066000 fc:05 7403846                    /home/cshou/SPADE/lib/jersey-core-1.9.jar
+7f9c6e338000-7f9c6e33a000 r--s 00003000 fc:05 7403866                    /home/cshou/SPADE/lib/jcl-over-slf4j-1.6.1.jar
+7f9c6e33a000-7f9c6e33d000 r--s 00018000 fc:05 7403857                    /home/cshou/SPADE/lib/jansi-1.5.jar
+7f9c6e33d000-7f9c6e349000 r--s 00097000 fc:05 7403885                    /home/cshou/SPADE/lib/jackson-mapper-asl-1.8.3.jar
+7f9c6e349000-7f9c6e34a000 r--s 00004000 fc:05 7403836                    /home/cshou/SPADE/lib/jackson-jaxrs-1.8.3.jar
+7f9c6e34a000-7f9c6e34e000 r--s 00034000 fc:05 7403860                    /home/cshou/SPADE/lib/jackson-core-asl-1.8.3.jar
+7f9c6e34e000-7f9c6e358000 r--s 0012b000 fc:05 7403887                    /home/cshou/SPADE/lib/h2-1.3.162.jar
+7f9c6e358000-7f9c6e3ab000 r--s 004f3000 fc:05 7403854                    /home/cshou/SPADE/lib/groovy-1.8.2.jar
+7f9c6e3ab000-7f9c6e3af000 r--s 00030000 fc:05 7403683                    /home/cshou/SPADE/lib/gremlin-1.3.jar
+7f9c6e3af000-7f9c6e3b0000 r--s 00003000 fc:05 7403832                    /home/cshou/SPADE/lib/geronimo-jta_1.1_spec-1.1.1.jar
+7f9c6e3b0000-7f9c6e3b2000 r--s 0000d000 fc:05 7403833                    /home/cshou/SPADE/lib/commons-logging-1.1.1.jar
+7f9c6e3b2000-7f9c6e3b6000 r--s 0003c000 fc:05 7403878                    /home/cshou/SPADE/lib/commons-lang-2.4.jar
+7f9c6e3b6000-7f9c6e3b9000 r--s 00018000 fc:05 7403853                    /home/cshou/SPADE/lib/commons-io-1.4.jar
+7f9c6e3b9000-7f9c6e3bd000 r--s 00020000 fc:05 7403877                    /home/cshou/SPADE/lib/commons-digester-1.8.1.jar
+7f9c6e3bd000-7f9c6e3c3000 r--s 00043000 fc:05 7403685                    /home/cshou/SPADE/lib/commons-configuration-1.6.jar
+7f9c6e3c3000-7f9c6e3d1000 r--s 0007f000 fc:05 7403838                    /home/cshou/SPADE/lib/commons-collections-3.2.1.jar
+7f9c6e3d1000-7f9c6e3d5000 r--s 0002f000 fc:05 7403864                    /home/cshou/SPADE/lib/commons-beanutils-core-1.8.0.jar
+7f9c6e3d5000-7f9c6e3da000 r--s 00034000 fc:05 7403845                    /home/cshou/SPADE/lib/commons-beanutils-1.8.0.jar
+7f9c6e3da000-7f9c6e3dc000 r--s 00005000 fc:05 7403884                    /home/cshou/SPADE/lib/blueprints-neo4j-graph-1.0.jar
+7f9c6e3dc000-7f9c6e3df000 r--s 00014000 fc:05 7403891                    /home/cshou/SPADE/lib/blueprints-core-1.0.jar
+7f9c6e3df000-7f9c6e3e0000 r--s 00008000 fc:05 7403858                    /home/cshou/SPADE/lib/asm-util-3.2.jar
+7f9c6e3e0000-7f9c6e3e2000 r--s 00004000 fc:05 7403870                    /home/cshou/SPADE/lib/asm-tree-3.2.jar
+7f9c6e3e2000-7f9c6e3e4000 r--s 00007000 fc:05 7403865                    /home/cshou/SPADE/lib/asm-commons-3.2.jar
+7f9c6e3e4000-7f9c6e3e5000 r--s 00004000 fc:05 7403881                    /home/cshou/SPADE/lib/asm-analysis-3.2.jar
+7f9c6e3e5000-7f9c6e3e6000 r--s 0000a000 fc:05 7403869                    /home/cshou/SPADE/lib/asm-3.1.jar
+7f9c6e3e6000-7f9c6e3eb000 r--s 00068000 fc:05 7403875                    /home/cshou/SPADE/lib/antlr-2.7.7.jar
+7f9c6e3eb000-7f9c6e3ec000 ---p 7f9c6e3eb000 00:00 0 
+7f9c6e3ec000-7f9c6e4ec000 rw-p 7f9c6e3ec000 00:00 0 
+7f9c6e4ec000-7f9c6e4ef000 ---p 7f9c6e4ec000 00:00 0 
+7f9c6e4ef000-7f9c6e5ed000 rw-p 7f9c6e4ef000 00:00 0 
+7f9c6e5ed000-7f9c6e5f0000 ---p 7f9c6e5ed000 00:00 0 
+7f9c6e5f0000-7f9c6e6ee000 rw-p 7f9c6e5f0000 00:00 0 
+7f9c6e6ee000-7f9c6e6f1000 ---p 7f9c6e6ee000 00:00 0 
+7f9c6e6f1000-7f9c6e7ef000 rw-p 7f9c6e6f1000 00:00 0 
+7f9c6e7ef000-7f9c6e7f2000 ---p 7f9c6e7ef000 00:00 0 
+7f9c6e7f2000-7f9c6e8f0000 rw-p 7f9c6e7f2000 00:00 0 
+7f9c6e8f0000-7f9c6e92f000 r--p 00000000 00:17 131021                     /usr/lib/locale/en_US.utf8/LC_CTYPE
+7f9c6e92f000-7f9c6ea1a000 r--p 00000000 00:17 131024                     /usr/lib/locale/en_US.utf8/LC_COLLATE
+7f9c6ea1a000-7f9c6ea1d000 ---p 7f9c6ea1a000 00:00 0 
+7f9c6ea1d000-7f9c6eb1b000 rw-p 7f9c6ea1d000 00:00 0 
+7f9c6eb1b000-7f9c6eb1e000 ---p 7f9c6eb1b000 00:00 0 
+7f9c6eb1e000-7f9c6ec1c000 rw-p 7f9c6eb1e000 00:00 0 
+7f9c6ec1c000-7f9c6ec1d000 ---p 7f9c6ec1c000 00:00 0 
+7f9c6ec1d000-7f9c6f696000 rw-p 7f9c6ec1d000 00:00 0 
+7f9c6f696000-7f9c6f855000 r--s 039fa000 00:1a 80535575                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/rt.jar
+7f9c6f855000-7f9c6f87d000 rw-p 7f9c6f855000 00:00 0 
+7f9c6f87d000-7f9c6f87e000 ---p 7f9c6f87d000 00:00 0 
+7f9c6f87e000-7f9c6f97e000 rw-p 7f9c6f87e000 00:00 0 
+7f9c6f97e000-7f9c6f97f000 ---p 7f9c6f97e000 00:00 0 
+7f9c6f97f000-7f9c6fa7f000 rw-p 7f9c6f97f000 00:00 0 
+7f9c6fa7f000-7f9c6fa80000 ---p 7f9c6fa7f000 00:00 0 
+7f9c6fa80000-7f9c6fb80000 rw-p 7f9c6fa80000 00:00 0 
+7f9c6fb80000-7f9c6fb81000 ---p 7f9c6fb80000 00:00 0 
+7f9c6fb81000-7f9c6fc81000 rw-p 7f9c6fb81000 00:00 0 
+7f9c6fc81000-7f9c6fc82000 ---p 7f9c6fc81000 00:00 0 
+7f9c6fc82000-7f9c6fd82000 rw-p 7f9c6fc82000 00:00 0 
+7f9c6fd82000-7f9c6fd83000 ---p 7f9c6fd82000 00:00 0 
+7f9c6fd83000-7f9c6fe83000 rw-p 7f9c6fd83000 00:00 0 
+7f9c6fe83000-7f9c6fe84000 ---p 7f9c6fe83000 00:00 0 
+7f9c6fe84000-7f9c6ff84000 rw-p 7f9c6fe84000 00:00 0 
+7f9c6ff84000-7f9c6ff85000 ---p 7f9c6ff84000 00:00 0 
+7f9c6ff85000-7f9c70090000 rw-p 7f9c6ff85000 00:00 0 
+7f9c70090000-7f9c700ae000 rw-p 7f9c70090000 00:00 0 
+7f9c700ae000-7f9c700d9000 rw-p 7f9c700ae000 00:00 0 
+7f9c700d9000-7f9c70159000 rw-p 7f9c700d9000 00:00 0 
+7f9c70159000-7f9c70164000 rw-p 7f9c70159000 00:00 0 
+7f9c70164000-7f9c70182000 rw-p 7f9c70164000 00:00 0 
+7f9c70182000-7f9c701ad000 rw-p 7f9c70182000 00:00 0 
+7f9c701ad000-7f9c7022c000 rw-p 7f9c701ad000 00:00 0 
+7f9c7022c000-7f9c70272000 rw-p 7f9c7022c000 00:00 0 
+7f9c70272000-7f9c70282000 rw-p 7f9c70272000 00:00 0 
+7f9c70282000-7f9c70283000 rw-p 7f9c70282000 00:00 0 
+7f9c70283000-7f9c704f3000 rwxp 7f9c70283000 00:00 0 
+7f9c704f3000-7f9c73283000 rw-p 7f9c704f3000 00:00 0 
+7f9c73283000-7f9c7329d000 r-xp 00000000 00:1a 80699464                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libzip.so
+7f9c7329d000-7f9c7349d000 ---p 0001a000 00:1a 80699464                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libzip.so
+7f9c7349d000-7f9c7349e000 rw-p 0001a000 00:1a 80699464                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libzip.so
+7f9c7349e000-7f9c734aa000 r-xp 00000000 fc:01 39071                      /lib/libnss_files-2.9.so
+7f9c734aa000-7f9c736a9000 ---p 0000c000 fc:01 39071                      /lib/libnss_files-2.9.so
+7f9c736a9000-7f9c736aa000 r--p 0000b000 fc:01 39071                      /lib/libnss_files-2.9.so
+7f9c736aa000-7f9c736ab000 rw-p 0000c000 fc:01 39071                      /lib/libnss_files-2.9.so
+7f9c736ab000-7f9c736b5000 r-xp 00000000 fc:01 39073                      /lib/libnss_nis-2.9.so
+7f9c736b5000-7f9c738b4000 ---p 0000a000 fc:01 39073                      /lib/libnss_nis-2.9.so
+7f9c738b4000-7f9c738b5000 r--p 00009000 fc:01 39073                      /lib/libnss_nis-2.9.so
+7f9c738b5000-7f9c738b6000 rw-p 0000a000 fc:01 39073                      /lib/libnss_nis-2.9.so
+7f9c738b6000-7f9c738cc000 r-xp 00000000 fc:01 39068                      /lib/libnsl-2.9.so
+7f9c738cc000-7f9c73acc000 ---p 00016000 fc:01 39068                      /lib/libnsl-2.9.so
+7f9c73acc000-7f9c73acd000 r--p 00016000 fc:01 39068                      /lib/libnsl-2.9.so
+7f9c73acd000-7f9c73ace000 rw-p 00017000 fc:01 39068                      /lib/libnsl-2.9.so
+7f9c73ace000-7f9c73ad0000 rw-p 7f9c73ace000 00:00 0 
+7f9c73ad0000-7f9c73ad8000 r-xp 00000000 fc:01 39069                      /lib/libnss_compat-2.9.so
+7f9c73ad8000-7f9c73cd7000 ---p 00008000 fc:01 39069                      /lib/libnss_compat-2.9.so
+7f9c73cd7000-7f9c73cd8000 r--p 00007000 fc:01 39069                      /lib/libnss_compat-2.9.so
+7f9c73cd8000-7f9c73cd9000 rw-p 00008000 fc:01 39069                      /lib/libnss_compat-2.9.so
+7f9c73cd9000-7f9c73d02000 r-xp 00000000 00:1a 80699448                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libjava.so
+7f9c73d02000-7f9c73f02000 ---p 00029000 00:1a 80699448                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libjava.so
+7f9c73f02000-7f9c73f04000 rw-p 00029000 00:1a 80699448                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libjava.so
+7f9c73f04000-7f9c73f13000 r-xp 00000000 00:1a 80699467                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libverify.so
+7f9c73f13000-7f9c74112000 ---p 0000f000 00:1a 80699467                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libverify.so
+7f9c74112000-7f9c74114000 rw-p 0000e000 00:1a 80699467                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/libverify.so
+7f9c74114000-7f9c7411b000 r-xp 00000000 fc:01 39078                      /lib/librt-2.9.so
+7f9c7411b000-7f9c7431a000 ---p 00007000 fc:01 39078                      /lib/librt-2.9.so
+7f9c7431a000-7f9c7431b000 r--p 00006000 fc:01 39078                      /lib/librt-2.9.so
+7f9c7431b000-7f9c7431c000 rw-p 00007000 fc:01 39078                      /lib/librt-2.9.so
+7f9c7431c000-7f9c743a0000 r-xp 00000000 fc:01 39066                      /lib/libm-2.9.so
+7f9c743a0000-7f9c7459f000 ---p 00084000 fc:01 39066                      /lib/libm-2.9.so
+7f9c7459f000-7f9c745a0000 r--p 00083000 fc:01 39066                      /lib/libm-2.9.so
+7f9c745a0000-7f9c745a1000 rw-p 00084000 fc:01 39066                      /lib/libm-2.9.so
+7f9c745a1000-7f9c74f71000 r-xp 00000000 00:1a 81494051                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/server/libjvm.so
+7f9c74f71000-7f9c75171000 ---p 009d0000 00:1a 81494051                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/server/libjvm.so
+7f9c75171000-7f9c7520c000 rw-p 009d0000 00:1a 81494051                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/server/libjvm.so
+7f9c7520c000-7f9c75245000 rw-p 7f9c7520c000 00:00 0 
+7f9c75245000-7f9c753ad000 r-xp 00000000 fc:01 39062                      /lib/libc-2.9.so
+7f9c753ad000-7f9c755ad000 ---p 00168000 fc:01 39062                      /lib/libc-2.9.so
+7f9c755ad000-7f9c755b1000 r--p 00168000 fc:01 39062                      /lib/libc-2.9.so
+7f9c755b1000-7f9c755b2000 rw-p 0016c000 fc:01 39062                      /lib/libc-2.9.so
+7f9c755b2000-7f9c755b7000 rw-p 7f9c755b2000 00:00 0 
+7f9c755b7000-7f9c755b9000 r-xp 00000000 fc:01 39065                      /lib/libdl-2.9.so
+7f9c755b9000-7f9c757b9000 ---p 00002000 fc:01 39065                      /lib/libdl-2.9.so
+7f9c757b9000-7f9c757ba000 r--p 00002000 fc:01 39065                      /lib/libdl-2.9.so
+7f9c757ba000-7f9c757bb000 rw-p 00003000 fc:01 39065                      /lib/libdl-2.9.so
+7f9c757bb000-7f9c757d1000 r-xp 00000000 00:1a 81502251                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/jli/libjli.so
+7f9c757d1000-7f9c759d0000 ---p 00016000 00:1a 81502251                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/jli/libjli.so
+7f9c759d0000-7f9c759d1000 rw-p 00015000 00:1a 81502251                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/amd64/jli/libjli.so
+7f9c759d1000-7f9c759e8000 r-xp 00000000 fc:01 39076                      /lib/libpthread-2.9.so
+7f9c759e8000-7f9c75be7000 ---p 00017000 fc:01 39076                      /lib/libpthread-2.9.so
+7f9c75be7000-7f9c75be8000 r--p 00016000 fc:01 39076                      /lib/libpthread-2.9.so
+7f9c75be8000-7f9c75be9000 rw-p 00017000 fc:01 39076                      /lib/libpthread-2.9.so
+7f9c75be9000-7f9c75bed000 rw-p 7f9c75be9000 00:00 0 
+7f9c75bed000-7f9c75c0d000 r-xp 00000000 fc:01 39056                      /lib/ld-2.9.so
+7f9c75c18000-7f9c75c19000 rw-p 7f9c75c18000 00:00 0 
+7f9c75c19000-7f9c75c22000 r--s 00254000 00:1a 80535581                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/resources.jar
+7f9c75c22000-7f9c75c26000 r--s 00088000 00:1a 80535566                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/jsse.jar
+7f9c75c26000-7f9c75c2a000 r--s 000f6000 00:1a 80683046                   /mnt/common/cshou/usr/jdk1.7.0/jre/lib/ext/localedata.jar
+7f9c75c2a000-7f9c75c2b000 r--p 00000000 00:17 131022                     /usr/lib/locale/en_US.utf8/LC_NUMERIC
+7f9c75c2b000-7f9c75c2c000 r--p 00000000 00:17 131023                     /usr/lib/locale/en_US.utf8/LC_TIME
+7f9c75c2c000-7f9c75c2d000 r--p 00000000 00:17 131025                     /usr/lib/locale/en_US.utf8/LC_MONETARY
+7f9c75c2d000-7f9c75c34000 r--s 00000000 00:17 122285                     /usr/lib/gconv/gconv-modules.cache
+7f9c75c34000-7f9c75c3e000 rw-p 7f9c75c34000 00:00 0 
+7f9c75c3e000-7f9c75cf4000 rw-p 7f9c75c3e000 00:00 0 
+7f9c75cf4000-7f9c75cf7000 ---p 7f9c75cf4000 00:00 0 
+7f9c75cf7000-7f9c75df8000 rw-p 7f9c75cf7000 00:00 0 
+7f9c75df8000-7f9c75df9000 r--p 00000000 00:17 131027                     /usr/lib/locale/en_US.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+7f9c75df9000-7f9c75dfa000 r--p 00000000 00:17 131028                     /usr/lib/locale/en_US.utf8/LC_PAPER
+7f9c75dfa000-7f9c75dfb000 r--p 00000000 00:17 131029                     /usr/lib/locale/en_US.utf8/LC_NAME
+7f9c75dfb000-7f9c75dfc000 r--p 00000000 00:17 131030                     /usr/lib/locale/en_US.utf8/LC_ADDRESS
+7f9c75dfc000-7f9c75dfd000 r--p 00000000 00:17 131031                     /usr/lib/locale/en_US.utf8/LC_TELEPHONE
+7f9c75dfd000-7f9c75dfe000 r--p 00000000 00:17 131032                     /usr/lib/locale/en_US.utf8/LC_MEASUREMENT
+7f9c75dfe000-7f9c75dff000 r--p 00000000 00:17 131033                     /usr/lib/locale/en_US.utf8/LC_IDENTIFICATION
+7f9c75dff000-7f9c75e07000 rw-s 00000000 fc:04 870914                     /tmp/hsperfdata_cshou/24994
+7f9c75e07000-7f9c75e08000 rw-p 7f9c75e07000 00:00 0 
+7f9c75e08000-7f9c75e09000 r--p 7f9c75e08000 00:00 0 
+7f9c75e09000-7f9c75e0c000 rw-p 7f9c75e09000 00:00 0 
+7f9c75e0c000-7f9c75e0d000 r--p 0001f000 fc:01 39056                      /lib/ld-2.9.so
+7f9c75e0d000-7f9c75e0e000 rw-p 00020000 fc:01 39056                      /lib/ld-2.9.so
+7fff7ddf8000-7fff7de0e000 rw-p 7ffffffe9000 00:00 0                      [stack]
+7fff7dffe000-7fff7dfff000 r-xp 7fff7dffe000 00:00 0                      [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx512m -Djava.library.path=../../lib -Dwrapper.key=SvOi38JdqL7f9_ep -Dwrapper.port=32000 -Dwrapper.jvm.port.min=31000 -Dwrapper.jvm.port.max=31999 -Dwrapper.pid=24992 -Dwrapper.version=3.5.13 -Dwrapper.native_library=wrapper -Dwrapper.cpu.timeout=10 -Dwrapper.jvmid=1 
+java_command: org.tanukisoftware.wrapper.WrapperSimpleApp spade.core.Kernel
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/mnt/common/cshou/usr/jdk1.7.0
+PATH=/mnt/common/cshou/usr/jdk1.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+LD_LIBRARY_PATH=/mnt/common/cshou/usr/include:/mnt/common/cshou/usr/lib:/mnt/common/cshou/FusionFS/fusionFS/src/ffsnet:/mnt/common/cshou/FusionFS/fusionFS/src/udt/src:/mnt/common/cshou/FusionFS/fusionFS/src/provenance
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x84be70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x84be70], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x6f3820], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x6f3820], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x6f3820], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x6f3820], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x6f3190], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libwrapper-linux-x86-64.so+0x5390], sa_mask[0]=0x00000001, sa_flags=0x10000000
+SIGINT: [libwrapper-linux-x86-64.so+0x53f0], sa_mask[0]=0x00000002, sa_flags=0x10000000
+SIGTERM: [libwrapper-linux-x86-64.so+0x53c0], sa_mask[0]=0x00004000, sa_flags=0x10000000
+SIGQUIT: [libjvm.so+0x6f5650], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:5.0
+
+uname:Linux 2.6.28.10 #1 SMP Wed Oct 7 17:08:41 CDT 2009 x86_64
+libc:glibc 2.9 NPTL 2.9 
+rlimit: STACK 8192k, CORE 0k, NPROC infinity, NOFILE 1024, AS infinity
+load average:0.00 0.08 0.11
+
+/proc/meminfo:
+MemTotal:        8090076 kB
+MemFree:         7248992 kB
+Buffers:          199104 kB
+Cached:           391868 kB
+SwapCached:            0 kB
+Active:           400640 kB
+Inactive:         348640 kB
+Active(anon):     158580 kB
+Inactive(anon):        0 kB
+Active(file):     242060 kB
+Inactive(file):   348640 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       7999480 kB
+SwapFree:        7999480 kB
+Dirty:                12 kB
+Writeback:           140 kB
+AnonPages:        158372 kB
+Mapped:            18204 kB
+Slab:              54584 kB
+SReclaimable:      40784 kB
+SUnreclaim:        13800 kB
+PageTables:         2484 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    12044516 kB
+Committed_AS:     439360 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      282952 kB
+VmallocChunk:   34359447215 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:        9920 kB
+DirectMap2M:     8378368 kB
+
+
+CPU:total 8 (4 cores per cpu, 1 threads per core) family 16 model 4 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, mmxext, 3dnowpref, lzcnt, sse4a
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.62
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.27
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.25
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.18
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 1
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.25
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 1
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.28
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 1
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.24
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 16
+model		: 4
+model name	: Quad-Core AMD Opteron(tm) Processor 2376
+stepping	: 2
+cpu MHz		: 800.000
+cache size	: 512 KB
+physical id	: 1
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 5
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm 3dnowext 3dnow constant_tsc rep_good pni monitor cx16 lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt
+bogomips	: 4600.23
+TLB size	: 1024 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm stc 100mhzsteps hwpstate
+
+
+
+Memory: 4k page, physical 8090076k(7248992k free), swap 7999480k(7999480k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0-b17) for linux-amd64 JRE (1.7.0-b147), built on Jun 27 2011 01:30:59 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Fri Oct 19 16:01:34 2012
+elapsed time: 212 seconds
+

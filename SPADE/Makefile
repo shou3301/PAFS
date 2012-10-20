@@ -1,6 +1,9 @@
 # SPADE - Support for Provenance Auditing in Distributed Environments.
 # Copyright (C) 2011 SRI International.
 
+# Java home
+JAVA_HOME = /mnt/common/cshou/usr/jdk1.7.0
+
 # Path to Android SDK platform tools
 ANDROID_SDK_TOOLS = /var/android-sdk-macosx/platform-tools
 
@@ -77,7 +80,7 @@ build-fusionfuse:
 	javac -proc:none -cp 'build:lib/*' -sourcepath src -d build src/spade/reporter/FusionFUSE.java
 	javah -classpath 'build:lib/*' -o src/spade/reporter/libLinuxFUSE.h spade.reporter.FusionFUSE
 	export PKG_CONFIG_PATH=$(OS_CONFIG_PATH);\
-	gcc -fPIC -shared -Wl,-soname,libFusionFUSE.so -I$(shell java -classpath build spade.utility.JavaHome)/../include -I$(shell java -classpath build spade.utility.JavaHome)/../include/linux -Wall src/spade/reporter/libFusionFUSE.c -o lib/libFusionFUSE.so `pkg-config fuse --cflags --libs`
+	gcc -fPIC -shared -Wl,-soname,libFusionFUSE.so -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux -Wall src/spade/reporter/libFusionFUSE.c -o lib/libFusionFUSE.so `pkg-config fuse --cflags --libs`
 	@echo ''
 	@echo '-----> IMPORTANT: To use the FusionFUSE reporter, please enable "user_allow_other" in /etc/fuse.conf'
 	@echo ''
@@ -107,7 +110,8 @@ build-macfuse:
 clean:
 	@echo 'Removing Java classes, native libraries, executables...'
 	@rm -rf build
-	@rm -rf src/spade/reporter/*.h lib/libLinuxFUSE.* lib/libMacFUSE.*
+	rm -rf lib/libLinuxFUSE.* lib/libMacFUSE.* lib/libFusionFUSE.*
+	#@rm -rf src/spade/reporter/*.h lib/libLinuxFUSE.* lib/libMacFUSE.*
 
 # ---------- Android-related rules [EXPERIMENTAL] ----------
 

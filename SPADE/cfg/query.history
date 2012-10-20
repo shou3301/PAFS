@@ -2,3 +2,16 @@ query Neo4j vertices type:Process
 exit
 query Neo4j lineage 1 10 ancestors null /home/cshou/SPADE/mountPoint/test/test.txt
 exit
+query Neo4j vertices hostaddress:192.168.1.23
+exit
+query Neo4j vertices filename:ppp
+exit
+query Neo4j vertices filename:iii
+exit
+query Neo4j vertices filename:iii
+query Neo4j lineage 165 10 descendants null /home/cshou/graphs/test.dot
+exit
+query Neo4j lineage 165 10 descendants null /home/cshou/graphs/test.dot
+exit
+add storage Neo4j /home/cshou/SPADE/database
+exit

@@ -238,7 +238,7 @@ _recvfile_udt(const char *remote_ip, const char *server_port, const char *remote
 	UDT::close(fhandle);
 
 	//if (size != 0)
-	//	spade_receivefile(remote_filename, remote_ip, local_filename);
+		spade_receivefile(remote_filename, remote_ip, local_filename);
 
 	ofs.close();
 
@@ -369,7 +369,7 @@ ffs_sendfile(const char *proto, const char *remote_ip, const char *server_port, 
 		return -1;
 	}
 
-	// spade_sendfile(local_filename, remote_filename, remote_ip);
+	spade_sendfile(local_filename, remote_filename, remote_ip);
 
 	return 0;
 }

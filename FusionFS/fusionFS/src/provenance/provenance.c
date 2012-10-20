@@ -57,7 +57,7 @@ void printLog(struct sock_info new_sock_info) {
 	printf("Client Sock -- %d \n", new_sock_info.client_socket);
 }
 
-int spade_receivefile(const char *original_path, const char *original_ip, const char *local_path) {
+int spade_receivefile(const char *original_path, const char *original_ip, const char *local_path, const char *size, const char *mtime) {
 
 	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
@@ -92,6 +92,14 @@ int spade_receivefile(const char *original_path, const char *original_ip, const 
 
 	bzero(buffer, BUFFER_SIZE);
 	strcpy(buffer, local_path);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, size);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, mtime);
 	send(client_socket, buffer, BUFFER_SIZE, 0);
 
 	close(client_socket);
@@ -414,7 +422,7 @@ int spade_link(const char *from, const char *to, pid_t pid) {
 	return 0;
 }
 
-int spade_read(const char *path, pid_t pid, int iotime, int link) {
+int spade_read(const char *path, pid_t pid, int iotime, int link, const char *size, const char *mtime) {
 
 	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
@@ -460,6 +468,14 @@ int spade_read(const char *path, pid_t pid, int iotime, int link) {
 
 	bzero(buffer, BUFFER_SIZE);
 	sprintf(buffer, "%d", link);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, size);
+	send(client_socket, buffer, BUFFER_SIZE, 0);
+
+	bzero(buffer, BUFFER_SIZE);
+	strcpy(buffer, mtime);
 	send(client_socket, buffer, BUFFER_SIZE, 0);
 
 	close(client_socket);
