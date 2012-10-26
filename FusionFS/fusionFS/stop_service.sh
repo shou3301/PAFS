@@ -3,4 +3,4 @@ pkill ffsnetd
 pkill server_zht
 
 #stop service for SPADE server
-./src/SPADE/bin/server stop
+/home/cshou/FusionFS/fusionFS/src/SPADE/bin/server stop
