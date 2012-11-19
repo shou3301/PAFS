@@ -6,13 +6,13 @@
 #include <sys/socket.h>    // for socket
 #include <netdb.h>
 
-struct sock_info
+typedef struct sock_info
 {
 	int client_socket;
 	struct sockaddr_in client_addr;
 	struct sockaddr_in server_addr;
 	socklen_t server_addr_length;
-};
+}sock_info;
 
 #ifdef __cplusplus
 extern "C" {

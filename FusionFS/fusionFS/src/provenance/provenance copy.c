@@ -15,9 +15,9 @@
 #define SERVER_IP "127.0.0.1"
 
 // provide socket connection info
-void get_sock_info(sock_info *p_sock_info) {
+struct sock_info get_sock_info() {
 
-	// struct sock_info new_sock_info;
+	struct sock_info new_sock_info;
 
 	struct sockaddr_in client_addr;
 	bzero(&client_addr, sizeof(client_addr));
@@ -25,7 +25,7 @@ void get_sock_info(sock_info *p_sock_info) {
 	client_addr.sin_addr.s_addr = htons(INADDR_ANY);
 	client_addr.sin_port = htons(0);
 
-	p_sock_info->client_addr = client_addr;
+	new_sock_info.client_addr = client_addr;
 
 	int client_socket = socket(AF_INET, SOCK_STREAM, 0);
 	if (client_socket < 0) {
@@ -33,7 +33,7 @@ void get_sock_info(sock_info *p_sock_info) {
 		return;
 	}
 
-	p_sock_info->client_socket = client_socket;
+	new_sock_info.client_socket = client_socket;
 
 	struct sockaddr_in server_addr;
 	bzero(&server_addr, sizeof(server_addr));
@@ -44,12 +44,13 @@ void get_sock_info(sock_info *p_sock_info) {
 		return;
 	}
 
-	p_sock_info->server_addr = server_addr;
+	new_sock_info.server_addr = server_addr;
 
 	socklen_t server_addr_length = sizeof(server_addr);
 
-	p_sock_info->server_addr_length = server_addr_length;
+	new_sock_info.server_addr_length = server_addr_length;
 
+	return new_sock_info;
 }
 
 void printLog(struct sock_info new_sock_info) {
@@ -58,8 +59,7 @@ void printLog(struct sock_info new_sock_info) {
 
 int spade_receivefile(const char *original_path, const char *original_ip, const char *local_path, const char *size, const char *mtime) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -104,16 +104,19 @@ int spade_receivefile(const char *original_path, const char *original_ip, const 
 
 	bzero(buffer, BUFFER_SIZE);
 	int length = recv(client_socket, buffer, BUFFER_SIZE, 0);
+	char *ret;
+	strcpy(ret, buffer);
+	if (length < 0 || strcmp(ret, "FAIL") == 0)
+		return 1;
 
 	close(client_socket);
 
-	return strlen(buffer);
+	return 0;
 }
 
 int spade_sendfile(const char *source_path, const char *dist_path, const char *dist_ip) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -155,9 +158,7 @@ int spade_sendfile(const char *source_path, const char *dist_path, const char *d
 }
 
 int spade_create(const char *path, pid_t pid) {
-
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -191,15 +192,19 @@ int spade_create(const char *path, pid_t pid) {
 
 	bzero(buffer, BUFFER_SIZE);
 	int length = recv(client_socket, buffer, BUFFER_SIZE, 0);
+	char *ret;
+	strcpy(ret, buffer);
+	if (length < 0 || strcmp(ret, "FAIL") == 0)
+		return 1;
+
 	close(client_socket);
 
-	return strlen(buffer);
+	return 0;
 }
 
 int spade_readlink(const char *path, pid_t pid, int iotime) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -244,8 +249,7 @@ int spade_readlink(const char *path, pid_t pid, int iotime) {
 
 int spade_unlink(const char *path, pid_t pid) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -286,8 +290,7 @@ int spade_unlink(const char *path, pid_t pid) {
 
 int spade_symlink(const char *from, const char *to, pid_t pid) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -333,8 +336,7 @@ int spade_symlink(const char *from, const char *to, pid_t pid) {
 
 int spade_rename(const char *from, const char *to, pid_t pid, int link, int iotime) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -387,8 +389,7 @@ int spade_rename(const char *from, const char *to, pid_t pid, int link, int ioti
 
 int spade_link(const char *from, const char *to, pid_t pid) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -437,8 +438,7 @@ int spade_link(const char *from, const char *to, pid_t pid) {
 
 int spade_read(const char *path, pid_t pid, int iotime, int link, const char *size, const char *mtime) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -494,15 +494,19 @@ int spade_read(const char *path, pid_t pid, int iotime, int link, const char *si
 
 	bzero(buffer, BUFFER_SIZE);
 	int length = recv(client_socket, buffer, BUFFER_SIZE, 0);
+	char *ret;
+	strcpy(ret, buffer);
+	if (length < 0 || strcmp(ret, "FAIL") == 0)
+		return 1;
+
 	close(client_socket);
 
-	return strlen(buffer);
+	return 0;
 }
 
 int spade_write(const char *path, pid_t pid, int iotime, int link) {
 
-	struct sock_info new_sock_info;
-	get_sock_info(&new_sock_info);
+	struct sock_info new_sock_info = get_sock_info();
 	int client_socket = new_sock_info.client_socket;
 	struct sockaddr_in client_addr = new_sock_info.client_addr;
 	struct sockaddr_in server_addr = new_sock_info.server_addr;
@@ -546,9 +550,14 @@ int spade_write(const char *path, pid_t pid, int iotime, int link) {
 
 	bzero(buffer, BUFFER_SIZE);
 	int length = recv(client_socket, buffer, BUFFER_SIZE, 0);
+	char *ret;
+	strcpy(ret, buffer);
+	if (length < 0 || strcmp(ret, "FAIL") == 0)
+		return 1;
+
 	close(client_socket);
 
-	return strlen(buffer);
+	return 0;
 }
 
 // main(int argc, char *argv) {

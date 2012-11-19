@@ -540,7 +540,16 @@ int bridge_read(int sock) {
     free(s_link);
     free(s_iotime);
 
-    spade_read(path, pid, iotime, link, s_size, s_mtime);
+    bzero(buffer, BUFFER_SIZE);
+    if (spade_read(path, pid, iotime, link, s_size, s_mtime) == 0) {
+        char *ret = "SUCCESS";
+        strcpy(buffer, ret);
+    }
+    else {
+        char *ret = "FAIL";
+        strcpy(buffer, ret);
+    }
+    send(new_server_socket, buffer, BUFFER_SIZE, 0);
 
     return 1;
 }
@@ -605,7 +614,16 @@ int bridge_write(int sock) {
     free(s_link);
     free(s_iotime);
 
-    spade_write(path, pid, iotime, link);
+    bzero(buffer, BUFFER_SIZE);
+    if (spade_write(path, pid, iotime, link) == 0) {
+        char *ret = "SUCCESS";
+        strcpy(buffer, ret);
+    }
+    else {
+        char *ret = "FAIL";
+        strcpy(buffer, ret);
+    }
+    send(new_server_socket, buffer, BUFFER_SIZE, 0);
 
     return 1;
 }
@@ -674,7 +692,16 @@ int bridge_receivefile(int sock) {
         strcpy(s_mtime, buffer);
     }
 
-    spade_receivefile(remote_path, remote_ip, local_path, s_size, s_mtime);
+    bzero(buffer, BUFFER_SIZE);
+    if (spade_receivefile(remote_path, remote_ip, local_path, s_size, s_mtime) == 0) {
+        char *ret = "SUCCESS";
+        strcpy(buffer, ret);
+    }
+    else {
+        char *ret = "FAIL";
+        strcpy(buffer, ret);
+    }
+    send(new_server_socket, buffer, BUFFER_SIZE, 0);
 
     return 1;
 }
@@ -759,7 +786,16 @@ int bridge_create(int sock) {
     pid_t pid = (pid_t) atoi(s_pid);
     free(s_pid);
 
-    spade_create(path, pid);
+    bzero(buffer, BUFFER_SIZE);
+    if (spade_create(path, pid) == 0) {
+        char *ret = "SUCCESS";
+        strcpy(buffer, ret);
+    }
+    else {
+        char *ret = "FAIL";
+        strcpy(buffer, ret);
+    }
+    send(new_server_socket, buffer, BUFFER_SIZE, 0);
 
     return 1;
 }

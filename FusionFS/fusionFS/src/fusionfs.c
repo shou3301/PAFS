@@ -245,7 +245,8 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 			ffs_recvfile_c("udt", res, "9000", fpath, fpath);
 
 			// ADDED BY CSHOU
-			if (strcmp(res, myaddr) != 0 && strcmp(res, "") != 0)
+			//if (strcmp(res, myaddr) != 0 && strcmp(res, "") != 0)
+			if (strcmp(res, myaddr) != 0 && res && strlen(res) != 0)
 				is_transfer = true;
 				//spade_receivefile(fpath, res, fpath, statbuf->st_size, statbuf->st_mtime);
 
@@ -257,7 +258,7 @@ int fusion_getattr(const char *path, struct stat *statbuf)
 			ffs_recvfile_c("udt", res, "9000", fpath, fpath);
 
 			// ADDED BY CSHOU
-			if (strcmp(res, myaddr) != 0)
+			if (strcmp(res, myaddr) != 0 && res && strlen(res) != 0)
 				is_transfer = true;
 				//spade_receivefile(fpath, res, fpath, statbuf->st_size, statbuf->st_mtime);
 

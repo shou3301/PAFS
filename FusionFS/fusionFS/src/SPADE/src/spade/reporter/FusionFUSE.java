@@ -327,7 +327,7 @@ public class FusionFUSE extends AbstractReporter {
         // cause FUSE to crash.
 
         File fileVertex = (link == 1) ? createLinkVertex(path) : createFileVertex(path);
-        if (fileVertex == null) {
+        /*if (fileVertex == null) {
             fileVertex = new File();
             java.io.File file = new java.io.File(path);
             fileVertex.addAnnotation("filename", file.getName());
@@ -336,7 +336,7 @@ public class FusionFUSE extends AbstractReporter {
             fileVertex.addAnnotation("lastmodified", mtime);
             fileVertex.addAnnotation("current hostaddress", localHostAddress);
             fileVertex.addAnnotation("temp", "true");
-        }
+        }*/
         putVertex(fileVertex);
         
         // cshou debug
@@ -526,7 +526,7 @@ public class FusionFUSE extends AbstractReporter {
     	// cshou debug 
     	fsLogger.info("Enter RECEIVE FILE ================================");
     	
-    	File fileVertex = new File();
+    	/*File fileVertex = new File();
     	java.io.File file = new java.io.File(localPath);
     	fileVertex.addAnnotation("current hostaddress", localHostAddress);
     	fileVertex.addAnnotation("filename", file.getName());
@@ -534,7 +534,9 @@ public class FusionFUSE extends AbstractReporter {
         fileVertex.addAnnotation("size", size);
         fileVertex.addAnnotation("lastmodified", mtime);
     	fileVertex.addAnnotation("temp", "true");
-    	putVertex(fileVertex);
+    	putVertex(fileVertex);*/
+        File fileVertex = createFileVertex(localPath);
+        putVertex(fileVertex);
     	fsLogger.info("Putting File vertex: " + fileVertex);
     	
     	Program prog = new Program();
